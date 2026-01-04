@@ -14,6 +14,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Loader2, Send, Sparkles } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+const MAX_WORDS = 500;
+
+function countWords(text: string): number {
+  return text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+}
 
 const JOB_OPTIONS = [
   { id: "zig-ml", title: "Zig Engineer — Machine Learning", passion: "optimizing inference" },
@@ -53,12 +60,20 @@ export function ApplicationForm({ selectedJob, userEmail, userName }: Applicatio
   const [githubUrl, setGithubUrl] = useState("");
   const [portfolioUrl, setPortfolioUrl] = useState("");
 
+  // Word counts
+  const passionWordCount = countWords(passionResponse);
+  const workStyleWordCount = countWords(workStyleResponse);
+  const experienceWordCount = countWords(experienceResponse);
+
   // Validation
   const linkedinRegex = /^https?:\/\/(www\.)?linkedin\.com\/.+/i;
   const githubRegex = /^https?:\/\/(www\.)?github\.com\/.+/i;
 
   const isLinkedinValid = linkedinUrl === "" || linkedinRegex.test(linkedinUrl);
   const isGithubValid = githubUrl === "" || githubRegex.test(githubUrl);
+  const isPassionValid = passionWordCount <= MAX_WORDS;
+  const isWorkStyleValid = workStyleWordCount <= MAX_WORDS;
+  const isExperienceValid = experienceWordCount <= MAX_WORDS;
 
   const isDev = isDeveloperRole(job);
   const passionTopic = getPassionPrompt(job);
@@ -69,6 +84,9 @@ export function ApplicationForm({ selectedJob, userEmail, userName }: Applicatio
     experienceResponse.trim() !== "" &&
     linkedinUrl.trim() !== "" &&
     isLinkedinValid &&
+    isPassionValid &&
+    isWorkStyleValid &&
+    isExperienceValid &&
     (isDev ? githubUrl.trim() !== "" && isGithubValid : true);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -144,9 +162,17 @@ export function ApplicationForm({ selectedJob, userEmail, userName }: Applicatio
 
       {/* Passion Question - Dynamic based on job */}
       <div className="space-y-2">
-        <Label htmlFor="passion">
-          Tell us about what you love about {passionTopic}
-        </Label>
+        <div className="flex items-center justify-between">
+          <Label htmlFor="passion">
+            Tell us about what you love about {passionTopic}
+          </Label>
+          <span className={cn(
+            "text-xs font-mono",
+            passionWordCount > MAX_WORDS ? "text-red" : "text-fg-muted"
+          )}>
+            {passionWordCount}/{MAX_WORDS}
+          </span>
+        </div>
         <Textarea
           id="passion"
           placeholder="What gets you excited? What problems do you love solving?"
@@ -154,14 +180,26 @@ export function ApplicationForm({ selectedJob, userEmail, userName }: Applicatio
           onChange={(e) => setPassionResponse(e.target.value)}
           rows={4}
           required
+          className={cn(!isPassionValid && "border-red focus:ring-red")}
         />
+        {!isPassionValid && (
+          <p className="text-red text-xs">Please keep your response under {MAX_WORDS} words</p>
+        )}
       </div>
 
       {/* Work Style */}
       <div className="space-y-2">
-        <Label htmlFor="workStyle">
-          Describe how you like to work
-        </Label>
+        <div className="flex items-center justify-between">
+          <Label htmlFor="workStyle">
+            Describe how you like to work
+          </Label>
+          <span className={cn(
+            "text-xs font-mono",
+            workStyleWordCount > MAX_WORDS ? "text-red" : "text-fg-muted"
+          )}>
+            {workStyleWordCount}/{MAX_WORDS}
+          </span>
+        </div>
         <Textarea
           id="workStyle"
           placeholder="Remote? Async? Deep focus? Collaboration? What does your ideal work day look like?"
@@ -169,14 +207,26 @@ export function ApplicationForm({ selectedJob, userEmail, userName }: Applicatio
           onChange={(e) => setWorkStyleResponse(e.target.value)}
           rows={4}
           required
+          className={cn(!isWorkStyleValid && "border-red focus:ring-red")}
         />
+        {!isWorkStyleValid && (
+          <p className="text-red text-xs">Please keep your response under {MAX_WORDS} words</p>
+        )}
       </div>
 
       {/* Experience */}
       <div className="space-y-2">
-        <Label htmlFor="experience">
-          Share any relevant experience
-        </Label>
+        <div className="flex items-center justify-between">
+          <Label htmlFor="experience">
+            Share any relevant experience
+          </Label>
+          <span className={cn(
+            "text-xs font-mono",
+            experienceWordCount > MAX_WORDS ? "text-red" : "text-fg-muted"
+          )}>
+            {experienceWordCount}/{MAX_WORDS}
+          </span>
+        </div>
         <Textarea
           id="experience"
           placeholder="Projects, roles, achievements—anything that shows you'd be great at this"
@@ -184,7 +234,11 @@ export function ApplicationForm({ selectedJob, userEmail, userName }: Applicatio
           onChange={(e) => setExperienceResponse(e.target.value)}
           rows={4}
           required
+          className={cn(!isExperienceValid && "border-red focus:ring-red")}
         />
+        {!isExperienceValid && (
+          <p className="text-red text-xs">Please keep your response under {MAX_WORDS} words</p>
+        )}
       </div>
 
       {/* Links Section */}

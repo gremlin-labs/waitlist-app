@@ -39,6 +39,10 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY --from=builder /app/drizzle.config.ts ./drizzle.config.ts
 COPY --from=builder /app/src/db ./src/db
 
+# Copy data files for scripts (names, words)
+COPY --from=builder /app/src/names ./src/names
+COPY --from=builder /app/src/words ./src/words
+
 # Copy scripts directory for admin/management commands
 COPY --from=builder /app/scripts ./scripts
 
