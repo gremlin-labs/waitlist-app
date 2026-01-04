@@ -24,7 +24,8 @@ export function buildDiscordAuthUrl(state: string, redirectUri: string): string 
   url.searchParams.set("client_id", process.env.DISCORD_CLIENT_ID!);
   url.searchParams.set("redirect_uri", redirectUri);
   url.searchParams.set("response_type", "code");
-  url.searchParams.set("scope", "identify guilds");
+  // identify: get user info, guilds: check membership, guilds.join: auto-add to server
+  url.searchParams.set("scope", "identify guilds guilds.join");
   url.searchParams.set("state", state);
   return url.toString();
 }
@@ -158,6 +159,55 @@ export async function checkDiscordServerMembership(
 
   const guilds = await getDiscordGuilds(accessToken);
   return guilds.some((guild) => guild.id === DISCORD_GUILD_ID);
+}
+
+/**
+ * Add user to our Discord server using their OAuth access token
+ * Requires: guilds.join scope + bot in server with CREATE_INSTANT_INVITE permission
+ */
+export async function addUserToDiscordServer(
+  userId: string,
+  accessToken: string
+): Promise<{ success: boolean; alreadyMember?: boolean; error?: string }> {
+  if (!DISCORD_GUILD_ID) {
+    return { success: false, error: "DISCORD_GUILD_ID not configured" };
+  }
+
+  const botToken = process.env.DISCORD_BOT_TOKEN;
+  if (!botToken) {
+    return { success: false, error: "DISCORD_BOT_TOKEN not configured" };
+  }
+
+  try {
+    const response = await fetch(
+      `${DISCORD_API_BASE}/guilds/${DISCORD_GUILD_ID}/members/${userId}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Bot ${botToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_token: accessToken,
+        }),
+      }
+    );
+
+    // 201 = added, 204 = already a member
+    if (response.status === 201) {
+      return { success: true };
+    }
+    if (response.status === 204) {
+      return { success: true, alreadyMember: true };
+    }
+
+    const error = await response.text();
+    console.error("Failed to add user to Discord server:", error);
+    return { success: false, error: `Discord API error: ${response.status}` };
+  } catch (error) {
+    console.error("Error adding user to Discord server:", error);
+    return { success: false, error: "Failed to connect to Discord" };
+  }
 }
 
 /**

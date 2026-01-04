@@ -3,17 +3,69 @@ import { cookies } from "next/headers";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { db } from "@/db";
-import { discordConnections } from "@/db/schema";
-import { eq } from "drizzle-orm";
+import { discordConnections, discordGuildMemberships, discordGuildStats } from "@/db/schema";
+import { eq, and, sql } from "drizzle-orm";
 import { encrypt } from "@/lib/crypto";
 import { awardPoints } from "@/lib/points";
 import {
   exchangeDiscordCode,
   getDiscordUser,
+  getDiscordGuilds,
   checkDiscordServerMembership,
+  addUserToDiscordServer,
 } from "@/lib/discord";
 
 const REDIRECT_URI = `${process.env.NEXT_PUBLIC_APP_URL}/api/social/discord/callback`;
+
+/**
+ * Store user's Discord guild memberships for marketing insights
+ */
+async function storeUserGuilds(userId: string, accessToken: string) {
+  const guilds = await getDiscordGuilds(accessToken);
+  
+  // Delete existing memberships for this user (we'll replace with fresh data)
+  await db.delete(discordGuildMemberships).where(eq(discordGuildMemberships.userId, userId));
+  
+  // Insert new memberships
+  if (guilds.length > 0) {
+    await db.insert(discordGuildMemberships).values(
+      guilds.map((guild) => ({
+        userId,
+        guildId: guild.id,
+        guildName: guild.name,
+        guildIcon: guild.icon || null,
+        isOwner: guild.owner,
+        firstSeenAt: new Date(),
+        lastSeenAt: new Date(),
+      }))
+    );
+    
+    // Update aggregated guild stats
+    for (const guild of guilds) {
+      await db
+        .insert(discordGuildStats)
+        .values({
+          guildId: guild.id,
+          guildName: guild.name,
+          guildIcon: guild.icon || null,
+          userCount: "1",
+          firstSeenAt: new Date(),
+          lastUpdatedAt: new Date(),
+        })
+        .onConflictDoUpdate({
+          target: discordGuildStats.guildId,
+          set: {
+            guildName: guild.name,
+            guildIcon: guild.icon || null,
+            lastUpdatedAt: new Date(),
+            // Increment user count - we'll recalculate periodically for accuracy
+          },
+        });
+    }
+  }
+  
+  console.log(`Stored ${guilds.length} guild memberships for user ${userId}`);
+}
 
 /**
  * GET /api/social/discord/callback
@@ -68,7 +120,18 @@ export async function GET(request: NextRequest) {
     const discordUser = await getDiscordUser(tokens.access_token);
 
     // Check server membership
-    const hasJoinedServer = await checkDiscordServerMembership(tokens.access_token);
+    let hasJoinedServer = await checkDiscordServerMembership(tokens.access_token);
+
+    // If not a member, try to auto-add them to the server
+    if (!hasJoinedServer) {
+      const addResult = await addUserToDiscordServer(discordUser.id, tokens.access_token);
+      if (addResult.success) {
+        hasJoinedServer = true;
+        console.log(`Auto-added user ${discordUser.username} to Discord server`);
+      } else if (addResult.error) {
+        console.warn(`Could not auto-add user to Discord: ${addResult.error}`);
+      }
+    }
 
     // Check if this Discord account is already connected to another user
     const existingConnection = await db.query.discordConnections.findFirst({
@@ -144,6 +207,11 @@ export async function GET(request: NextRequest) {
         "Joined Vibe Mode Discord server"
       );
     }
+
+    // Store user's guild memberships for marketing insights (non-blocking)
+    storeUserGuilds(session.user.id, tokens.access_token).catch((err) => {
+      console.error("Failed to store guild memberships:", err);
+    });
 
     // Clear OAuth cookie
     cookieStore.delete("discord_oauth_state");
