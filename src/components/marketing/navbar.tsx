@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/ui/logo";
+import { useSession } from "@/lib/auth-client";
 
 const navLinks = [
   { href: "/philosophy", label: "Philosophy" },
@@ -13,6 +14,7 @@ const navLinks = [
 
 export function Navbar() {
   const pathname = usePathname();
+  const { data: session } = useSession();
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border-subtle bg-surface-void/80 backdrop-blur-md">
@@ -39,18 +41,29 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link
-            href="/auth/signin"
-            className="hidden text-sm text-fg-muted hover:text-fg-primary sm:inline-block"
-          >
-            Sign In
-          </Link>
-          <Link
-            href="/auth/signin"
-            className="rounded-sm bg-pink px-4 py-2 text-sm font-semibold text-fg-inverse transition-all hover:bg-pink-bright hover:shadow-glow-pink"
-          >
-            Join Waitlist
-          </Link>
+          {session?.user ? (
+            <Link
+              href="/dashboard"
+              className="rounded-sm bg-pink px-4 py-2 text-sm font-semibold text-fg-inverse transition-all hover:bg-pink-bright hover:shadow-glow-pink"
+            >
+              Dashboard
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="/auth/signin"
+                className="hidden text-sm text-fg-muted hover:text-fg-primary sm:inline-block"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/auth/signin"
+                className="rounded-sm bg-pink px-4 py-2 text-sm font-semibold text-fg-inverse transition-all hover:bg-pink-bright hover:shadow-glow-pink"
+              >
+                Join Waitlist
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

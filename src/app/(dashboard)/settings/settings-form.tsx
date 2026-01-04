@@ -172,13 +172,15 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
   }
 
   function handleCopyProfileUrl() {
-    navigator.clipboard.writeText(`${baseUrl}/${username || initialData.username}`);
+    const cleanBaseUrl = baseUrl.replace(/\/$/, ""); // Remove trailing slash if present
+    navigator.clipboard.writeText(`${cleanBaseUrl}/${username || initialData.username}`);
     setProfileCopied(true);
     setTimeout(() => setProfileCopied(false), 2000);
   }
 
   function handleVisitProfile() {
-    window.open(`${baseUrl}/${username || initialData.username}`, "_blank");
+    const cleanBaseUrl = baseUrl.replace(/\/$/, ""); // Remove trailing slash if present
+    window.open(`${cleanBaseUrl}/${username || initialData.username}`, "_blank");
   }
 
   async function handleSignOut() {
