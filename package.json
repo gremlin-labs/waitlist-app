@@ -11,6 +11,7 @@
     "db:migrate": "bun drizzle-kit migrate",
     "db:push": "bun drizzle-kit push",
     "db:studio": "bun drizzle-kit studio",
+    "db:clean": "bun scripts/db-clean.ts",
     "admin:promote": "bun scripts/promote-admin.ts promote",
     "admin:demote": "bun scripts/promote-admin.ts demote",
     "admin:list": "bun scripts/promote-admin.ts list",

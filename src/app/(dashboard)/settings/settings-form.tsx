@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,9 +20,12 @@ import {
   AtSign,
   AlertCircle,
   CheckCircle,
+  ExternalLink,
+  LogOut,
 } from "lucide-react";
 import { COUNTRIES, getTimezones } from "@/constants/countries";
 import { cn } from "@/lib/utils";
+import { signOut } from "@/lib/auth-client";
 
 interface SettingsFormProps {
   initialData: {
@@ -52,7 +56,10 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [profileCopied, setProfileCopied] = useState(false);
+  const [signingOut, setSigningOut] = useState(false);
 
+  const router = useRouter();
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://vibemode.ai";
   const timezones = getTimezones();
   const hasChanges =
@@ -164,6 +171,26 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
     setTimeout(() => setCopied(false), 2000);
   }
 
+  function handleCopyProfileUrl() {
+    navigator.clipboard.writeText(`${baseUrl}/${username || initialData.username}`);
+    setProfileCopied(true);
+    setTimeout(() => setProfileCopied(false), 2000);
+  }
+
+  function handleVisitProfile() {
+    window.open(`${baseUrl}/${username || initialData.username}`, "_blank");
+  }
+
+  async function handleSignOut() {
+    setSigningOut(true);
+    try {
+      await signOut();
+      router.push("/");
+    } catch {
+      setSigningOut(false);
+    }
+  }
+
   return (
     <div className="space-y-6">
       {/* Username Section */}
@@ -229,11 +256,35 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
             )}
           </div>
           
-          <div className="p-3 rounded-md bg-bg-elevated border border-border-subtle">
+          <div className="p-3 rounded-md bg-bg-elevated border border-border-subtle flex items-center justify-between gap-2">
             <p className="text-sm text-fg-muted">
               Your public profile:{" "}
               <span className="font-mono text-pink">vibemode.ai/{username || "username"}</span>
             </p>
+            <div className="flex items-center gap-1">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleCopyProfileUrl}
+                className="h-8 w-8 shrink-0"
+                title="Copy profile URL"
+              >
+                {profileCopied ? (
+                  <Check className="w-4 h-4 text-green" />
+                ) : (
+                  <Copy className="w-4 h-4" />
+                )}
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleVisitProfile}
+                className="h-8 w-8 shrink-0"
+                title="Visit profile"
+              >
+                <ExternalLink className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -418,6 +469,28 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
             <>
               <Save className="w-4 h-4 mr-2" />
               Save Changes
+            </>
+          )}
+        </Button>
+      </div>
+
+      {/* Sign Out */}
+      <div className="pt-6 border-t border-border-subtle">
+        <Button
+          variant="outline"
+          onClick={handleSignOut}
+          disabled={signingOut}
+          className="text-fg-muted hover:text-red hover:border-red"
+        >
+          {signingOut ? (
+            <>
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Signing out...
+            </>
+          ) : (
+            <>
+              <LogOut className="w-4 h-4 mr-2" />
+              Sign Out
             </>
           )}
         </Button>
