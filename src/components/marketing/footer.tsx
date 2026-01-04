@@ -89,23 +89,8 @@ export function Footer() {
             <h4 className="label-uppercase mb-4 text-fg-muted">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-sm text-fg-secondary hover:text-fg-primary">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-sm text-fg-secondary hover:text-fg-primary">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link href="/careers" className="text-sm text-fg-secondary hover:text-fg-primary">
                   Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-fg-secondary hover:text-fg-primary">
-                  Contact
                 </Link>
               </li>
             </ul>
