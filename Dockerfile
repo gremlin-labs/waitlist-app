@@ -31,6 +31,17 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN groupadd --system --gid 1001 nodejs && \
     useradd --system --uid 1001 --gid nodejs nextjs
 
+# Copy package files and dependencies for running scripts (drizzle, etc.)
+COPY --from=builder /app/package.json ./package.json
+COPY --from=deps /app/node_modules ./node_modules
+
+# Copy drizzle config and database schema
+COPY --from=builder /app/drizzle.config.ts ./drizzle.config.ts
+COPY --from=builder /app/src/db ./src/db
+
+# Copy scripts directory for admin/management commands
+COPY --from=builder /app/scripts ./scripts
+
 # Copy public assets
 COPY --from=builder /app/public ./public
 
