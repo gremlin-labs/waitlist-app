@@ -131,12 +131,15 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-fg-primary sm:text-5xl md:text-6xl">
-              The Only Knife in a Drawer
+              Lightning Fast Vibe IDE
               <br />
-              <span className="text-pink">Full of Forks</span>
+              <span className="text-pink">for macOS</span>
             </h1>
 
             {/* Subheadline */}
+            <p className="mx-auto mb-10 max-w-2xl text-2xl font-semibold text-yellow sm:text-3xl">
+              Unfork yourself.
+            </p>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-fg-secondary sm:text-xl">
               A native AI development environment built from scratch.
               <br />
