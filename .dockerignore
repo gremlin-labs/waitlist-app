@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+
+# Build output
+.next
+out
+dist
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Environment files (should be provided at runtime)
+.env
+.env.*
+!env.example
+
+# Documentation
+docs
+*.md
+!README.md
+
+# Development files
+.eslintcache
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Testing
+coverage
+.nyc_output
+
+# Misc
+*.tgz
+Thumbs.db

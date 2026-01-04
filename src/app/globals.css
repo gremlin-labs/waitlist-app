@@ -1,0 +1,368 @@
+/* Vibe Mode Design System - Tailwind CSS v4 */
+@import "tailwindcss";
+
+@theme {
+  /* ========================================
+     COLORS - SURFACES
+     ======================================== */
+  --color-surface-void: #050508;
+  --color-surface-base: #0a0a10;
+  --color-surface-raised: #12121a;
+  --color-surface-overlay: #1a1a24;
+  --color-surface-elevated: #22222e;
+
+  /* ========================================
+     COLORS - BORDERS
+     ======================================== */
+  --color-border-subtle: #1a1a2a;
+  --color-border-default: #2a2a3a;
+  --color-border-strong: #3a3a4a;
+
+  /* ========================================
+     COLORS - TEXT
+     ======================================== */
+  --color-fg-primary: #f0f0f5;
+  --color-fg-secondary: #b0b0c0;
+  --color-fg-muted: #8888aa;
+  --color-fg-dim: #555566;
+  --color-fg-inverse: #050508;
+
+  /* ========================================
+     COLORS - ACCENTS
+     ======================================== */
+  /* Pink (Primary) */
+  --color-pink: #ff2d7a;
+  --color-pink-bright: #ff4d8a;
+  --color-pink-dim: rgba(255, 45, 122, 0.2);
+  --color-pink-glow: rgba(255, 45, 122, 0.4);
+  --color-pink-ghost: rgba(255, 45, 122, 0.08);
+
+  /* Green (Success) */
+  --color-green: #00ff88;
+  --color-green-bright: #33ff9f;
+  --color-green-dim: rgba(0, 255, 136, 0.15);
+  --color-green-glow: rgba(0, 255, 136, 0.35);
+
+  /* Yellow (Warning) */
+  --color-yellow: #ffdd00;
+  --color-yellow-bright: #ffe433;
+  --color-yellow-dim: rgba(255, 221, 0, 0.15);
+  --color-yellow-glow: rgba(255, 221, 0, 0.35);
+
+  /* Blue (Info) */
+  --color-blue: #00d4ff;
+  --color-blue-bright: #33ddff;
+  --color-blue-dim: rgba(0, 212, 255, 0.15);
+  --color-blue-glow: rgba(0, 212, 255, 0.35);
+
+  /* Red (Danger) */
+  --color-red: #ff3366;
+  --color-red-bright: #ff4d7a;
+  --color-red-dim: rgba(255, 51, 102, 0.15);
+  --color-red-glow: rgba(255, 51, 102, 0.35);
+
+  /* Additional Accents */
+  --color-purple: #bf00ff;
+  --color-purple-dim: rgba(191, 0, 255, 0.15);
+  --color-cyan: #00ffff;
+  --color-cyan-dim: rgba(0, 255, 255, 0.15);
+  --color-orange: #ff6600;
+  --color-orange-dim: rgba(255, 102, 0, 0.15);
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+  --font-family-sans: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-family-mono: "Space Mono", "Martian Mono", ui-monospace, monospace;
+
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 48px;
+  --font-size-5xl: 64px;
+  --font-size-stat: 42px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.5px;
+  --letter-spacing-wider: 1px;
+  --letter-spacing-widest: 2px;
+
+  /* ========================================
+     SPACING
+     ======================================== */
+  --spacing-0: 0;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+
+  /* ========================================
+     BORDERS & RADIUS
+     ======================================== */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  --border-width-default: 1px;
+  --border-width-thick: 2px;
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.7);
+  --shadow-glow-pink: 0 0 20px rgba(255, 45, 122, 0.3);
+  --shadow-glow-green: 0 0 20px rgba(0, 255, 136, 0.3);
+  --shadow-glow-blue: 0 0 20px rgba(0, 212, 255, 0.3);
+
+  /* ========================================
+     MOTION
+     ======================================== */
+  --duration-instant: 50ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 400ms;
+  --duration-hero: 600ms;
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ========================================
+     LAYOUT
+     ======================================== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+
+  /* ========================================
+     INPUTS
+     ======================================== */
+  --input-height-sm: 32px;
+  --input-height-md: 40px;
+  --input-height-lg: 48px;
+}
+
+/* ========================================
+   KEYFRAME ANIMATIONS
+   ======================================== */
+@keyframes generating-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--color-pink-glow);
+  }
+  50% {
+    box-shadow: 0 0 30px 0 var(--color-pink);
+  }
+}
+
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================================
+   CUSTOM UTILITIES
+   ======================================== */
+@utility animate-generating {
+  animation: generating-pulse var(--duration-slow) var(--ease-emphasized) infinite;
+}
+
+@utility animate-glow {
+  animation: glow-breathe 2s var(--ease-standard) infinite;
+}
+
+@utility animate-fade-in {
+  animation: fade-in-up var(--duration-normal) var(--ease-decelerate);
+}
+
+@utility animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@utility animate-float {
+  animation: float 3s var(--ease-standard) infinite;
+}
+
+@utility card-base {
+  background-color: var(--color-surface-base);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+
+@utility card-raised {
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+@utility stat-card {
+  background-color: var(--color-surface-base);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-5);
+  text-align: center;
+}
+
+@utility label-uppercase {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-fg-muted);
+}
+
+@utility focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-pink-glow);
+}
+
+@utility focus-ring-inset {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-pink);
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+@layer base {
+  html {
+    font-family: var(--font-family-sans);
+    background-color: var(--color-surface-void);
+    color: var(--color-fg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+    line-height: var(--line-height-normal);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface-void);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-default);
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-strong);
+  }
+
+  /* Selection */
+  ::selection {
+    background: var(--color-pink-dim);
+    color: var(--color-fg-primary);
+  }
+
+  /* Links */
+  a {
+    color: var(--color-pink);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+
+  a:hover {
+    color: var(--color-pink-bright);
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
