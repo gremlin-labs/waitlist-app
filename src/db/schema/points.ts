@@ -15,11 +15,11 @@ import { user } from "./auth";
 export const pointActionEnum = pgEnum("point_action", [
   // Twitter actions
   "twitter_connect",
-  "twitter_follow_vibemodeai",
-  "twitter_follow_gremlinlabs",
-  "twitter_follow_productgremlin",
-  "twitter_unfollow_vibemodeai",
-  "twitter_unfollow_gremlinlabs",
+  "twitter_follow_account1",
+  "twitter_follow_account2",
+  "twitter_follow_account3",
+  "twitter_unfollow_account1",
+  "twitter_unfollow_account2",
   "twitter_unfollow_productgremlin",
   // Discord actions
   "discord_connect",

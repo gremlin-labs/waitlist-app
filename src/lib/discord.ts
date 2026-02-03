@@ -248,5 +248,5 @@ export async function revokeDiscordToken(accessToken: string): Promise<void> {
  * Get the Discord server invite URL
  */
 export function getDiscordInviteUrl(): string {
-  return process.env.DISCORD_INVITE_URL || "https://discord.gg/gremlinlabs";
+  return process.env.DISCORD_INVITE_URL || "https://discord.gg/thiscompany";
 }

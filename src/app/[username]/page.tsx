@@ -5,7 +5,7 @@ import { sql } from "drizzle-orm";
 import { isReservedPath, formatUsernameForDisplay } from "@/lib/username";
 import { Navbar } from "@/components/marketing/navbar";
 import { Footer } from "@/components/marketing/footer";
-import { User, Calendar, Trophy, Twitter, MessageCircle } from "lucide-react";
+import { User, Calendar, Trophy } from "lucide-react";
 
 interface ProfilePageProps {
   params: Promise<{
@@ -78,7 +78,7 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
 
               {/* Name & Username */}
               <h1 className="text-2xl font-bold text-fg-primary mb-1">
-                {userData.name || "Vibe Mode User"}
+                {userData.name || "Amazing App User"}
               </h1>
               <p className="font-mono text-pink mb-4">
                 {formatUsernameForDisplay(userData.username || "")}
@@ -126,7 +126,7 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
                   href="/auth/signin"
                   className="inline-flex items-center justify-center h-10 px-6 rounded-sm bg-pink text-fg-inverse font-semibold hover:bg-pink-bright transition-colors"
                 >
-                  Join Vibe Mode
+                  Join Amazing App
                 </a>
               </div>
             </div>
@@ -156,18 +156,18 @@ export async function generateMetadata({ params }: ProfilePageProps) {
 
   if (!userData) {
     return {
-      title: "User Not Found | Vibe Mode",
+      title: "User Not Found | Amazing App",
     };
   }
 
   const displayName = userData.name || userData.username || "User";
 
   return {
-    title: `${displayName} (@${userData.username}) | Vibe Mode`,
-    description: `${displayName}'s profile on Vibe Mode - the native AI development environment for macOS.`,
+    title: `${displayName} (@${userData.username}) | Amazing App`,
+    description: `${displayName}'s profile on Amazing App - the native AI development environment for macOS.`,
     openGraph: {
-      title: `${displayName} (@${userData.username}) | Vibe Mode`,
-      description: `${displayName}'s profile on Vibe Mode - the native AI development environment for macOS.`,
+      title: `${displayName} (@${userData.username}) | Amazing App`,
+      description: `${displayName}'s profile on Amazing App - the native AI development environment for macOS.`,
     },
   };
 }

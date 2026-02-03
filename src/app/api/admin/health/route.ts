@@ -25,7 +25,7 @@ const ENV_CONFIG = {
     { key: "TWITTER_CLIENT_ID", label: "Twitter Client ID", required: false },
     { key: "TWITTER_CLIENT_SECRET", label: "Twitter Client Secret", required: false },
     { key: "TWITTER_ID_VIBEMODEAI", label: "Twitter ID @vibemodeai", required: false },
-    { key: "TWITTER_ID_GREMLINLABS", label: "Twitter ID @gremlinlabs", required: false },
+    { key: "TWITTER_ID_THISCOMPANY", label: "Twitter ID @thiscompany", required: false },
     { key: "TWITTER_ID_PRODUCTGREMLIN", label: "Twitter ID @productgremlin", required: false },
   ],
   discord: [
@@ -39,7 +39,7 @@ const ENV_CONFIG = {
   infrastructure: [
     { key: "REDIS_URL", label: "Redis URL", required: false },
     { key: "ENCRYPTION_KEY", label: "Encryption Key", required: false },
-    { key: "VIBEMODE_API_URL", label: "Vibe Mode API URL", required: false },
+    { key: "VIBEMODE_API_URL", label: "Amazing App API URL", required: false },
   ],
 };
 

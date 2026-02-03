@@ -3,8 +3,6 @@ import { Navbar } from "@/components/marketing/navbar";
 import { Footer } from "@/components/marketing/footer";
 import { Logo } from "@/components/ui/logo";
 import {
-  Cpu,
-  HardDrive,
   Zap,
   Eye,
   Terminal,
@@ -39,7 +37,7 @@ const FEATURES = [
     icon: Terminal,
     title: "Ghostty Inside",
     description:
-      "Yes, that Ghostty. The mass-hyped, mass-praised GPU-accelerated terminal emulator—built directly into Vibe Mode. Not spawned as a subprocess. Not wrapped in an iframe. Native integration.",
+      "Yes, that Ghostty. The mass-hyped, mass-praised GPU-accelerated terminal emulator—built directly into Amazing App. Not spawned as a subprocess. Not wrapped in an iframe. Native integration.",
     tagline: "And the whole app is still just 100MB. We checked.",
   },
   {
@@ -131,9 +129,7 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-fg-primary sm:text-5xl md:text-6xl">
-              Lightning Fast Vibe IDE
-              <br />
-              <span className="text-pink">for macOS</span>
+              A Wonderful App
             </h1>
 
             {/* Subheadline */}
@@ -203,7 +199,7 @@ export default function Home() {
                   bare metal specifically for AI-assisted development?
                 </p>
                 <p>
-                  The answer is Vibe Mode—a native macOS application where every byte
+                  The answer is Amazing App—a native macOS application where every byte
                   serves a purpose. The inference engine compiles directly into the
                   daemon. The terminal emulator shares memory with the app. The context
                   engine indexes your project in milliseconds, not minutes.
@@ -277,7 +273,7 @@ export default function Home() {
                 <thead>
                   <tr className="border-b border-border-subtle bg-surface-raised">
                     <th className="label-uppercase p-4 text-left" />
-                    <th className="label-uppercase p-4 text-right text-pink">Vibe Mode</th>
+                    <th className="label-uppercase p-4 text-right text-pink">Amazing App</th>
                     <th className="label-uppercase p-4 text-right text-fg-dim">The Other Guys™</th>
                   </tr>
                 </thead>
@@ -360,7 +356,7 @@ export default function Home() {
               Join the Gremlins
             </h2>
             <p className="mb-8 text-lg text-fg-muted">
-              Vibe Mode is currently in private beta. We&apos;re letting people in
+              Amazing App is currently in private beta. We&apos;re letting people in
               based on waitlist position—which you can improve by following us
               on social and inviting friends who appreciate good engineering.
             </p>

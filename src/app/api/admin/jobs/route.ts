@@ -15,7 +15,7 @@ import { rankingsQueue, socialRefreshQueue, cleanupQueue } from "@/lib/queue";
 /**
  * GET /api/admin/jobs - Get queue statistics
  */
-export async function GET(req: NextRequest) {
+export async function GET(_req: NextRequest) {
   const session = await auth.api.getSession({ headers: await headers() });
 
   if (!session?.user) {

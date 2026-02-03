@@ -1,4 +1,4 @@
-// Vibe Mode Database Schema
+// Waitlist Database Schema
 // Export all schema tables from this file
 
 export * from "./auth";

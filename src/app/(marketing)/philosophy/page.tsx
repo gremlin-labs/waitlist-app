@@ -60,7 +60,7 @@ const PRINCIPLES = [
     icon: Sparkles,
     title: "The Vibes Must Flow",
     description:
-      "Yes, we named it \"Vibe Mode.\" Yes, we're aware that's ridiculous. But here's the thing: when your tools disappear and you're just creating, that's a vibe. We're engineering that feeling—the flow state where great work happens. Call it vibes. We do.",
+      "Yes, we named it \"Amazing App.\" Yes, we're aware that's ridiculous. But here's the thing: when your tools disappear and you're just creating, that's a vibe. We're engineering that feeling—the flow state where great work happens. Call it vibes. We do.",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function PhilosophyPage() {
           <div className="rounded-md border border-border-subtle bg-surface-base p-8 md:p-12">
             <div className="space-y-6 text-lg leading-relaxed text-fg-secondary">
               <p>
-                Vibe Mode began with a question: What would an IDE look like if AI
+                Amazing App began with a question: What would an IDE look like if AI
                 wasn&apos;t a feature, but the foundation?
               </p>
               <div className="font-mono text-fg-muted space-y-1 pl-4 border-l-2 border-border-subtle">

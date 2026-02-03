@@ -29,12 +29,12 @@ async function getTriggerFn() {
 export const POINTS_CONFIG = {
   // Twitter
   twitter_connect: 5,
-  twitter_follow_vibemodeai: 10,
-  twitter_follow_gremlinlabs: 10,
-  twitter_follow_productgremlin: 10,
-  twitter_unfollow_vibemodeai: -10,
-  twitter_unfollow_gremlinlabs: -10,
-  twitter_unfollow_productgremlin: -10,
+  twitter_follow_account1: 10,
+  twitter_follow_account2: 10,
+  twitter_follow_account3: 10,
+  twitter_unfollow_account1: -10,
+  twitter_unfollow_account2: -10,
+  twitter_unfollow_account3: -10,
   
   // Discord
   discord_connect: 5,

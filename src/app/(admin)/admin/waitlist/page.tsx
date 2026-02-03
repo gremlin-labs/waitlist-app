@@ -15,7 +15,6 @@ import {
   Check,
   X,
   RefreshCw,
-  ArrowUpDown,
   Eye,
   Calculator,
   Loader2,
@@ -33,8 +32,8 @@ interface WaitlistUser {
   referralCode: string | null;
   twitter: {
     connected: boolean;
-    followsVibemodeai: boolean;
-    followsGremlinlabs: boolean;
+    followsAccount1: boolean;
+    followsAccount2: boolean;
     followsProductgremlin: boolean;
   } | null;
   discord: {
@@ -277,8 +276,8 @@ export default function WaitlistPage() {
                           {u.twitter?.connected ? (
                             <Twitter
                               className={`w-4 h-4 ${
-                                u.twitter.followsVibemodeai &&
-                                u.twitter.followsGremlinlabs &&
+                                u.twitter.followsAccount1 &&
+                                u.twitter.followsAccount2 &&
                                 u.twitter.followsProductgremlin
                                   ? "text-cyan"
                                   : "text-fg-dim"

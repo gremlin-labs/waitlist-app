@@ -119,7 +119,7 @@ async function main() {
 
     default:
       console.log(`
-📦 Vibe Mode Queue Manager
+📦 Amazing App Queue Manager
 
 Usage:
   bun scripts/queue-manager.ts <command> [queue]

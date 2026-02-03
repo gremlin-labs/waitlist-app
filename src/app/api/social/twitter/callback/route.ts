@@ -110,9 +110,9 @@ export async function GET(request: NextRequest) {
           accessToken: encrypt(tokens.access_token),
           refreshToken: tokens.refresh_token ? encrypt(tokens.refresh_token) : null,
           tokenExpiresAt: tokenExpiry,
-          followsVibemodeai: follows.vibemodeai,
-          followsGremlinlabs: follows.gremlinlabs,
-          followsProductgremlin: follows.productgremlin,
+          followsAccount1: follows.followsAccount1,
+          followsAccount2: follows.followsAccount2,
+          followsProductgremlin: follows.followsProductgremlin,
           followsLastChecked: new Date(),
           updatedAt: new Date(),
         })
@@ -128,9 +128,9 @@ export async function GET(request: NextRequest) {
         accessToken: encrypt(tokens.access_token),
         refreshToken: tokens.refresh_token ? encrypt(tokens.refresh_token) : null,
         tokenExpiresAt: tokenExpiry,
-        followsVibemodeai: follows.vibemodeai,
-        followsGremlinlabs: follows.gremlinlabs,
-        followsProductgremlin: follows.productgremlin,
+        followsAccount1: follows.followsAccount1,
+        followsAccount2: follows.followsAccount2,
+        followsProductgremlin: follows.followsProductgremlin,
         followsLastChecked: new Date(),
       });
 
@@ -145,26 +145,26 @@ export async function GET(request: NextRequest) {
     }
 
     // Award points for follows (check if not already awarded)
-    if (follows.vibemodeai) {
+    if (follows.followsAccount1) {
       await awardPoints(
         session.user.id,
-        "twitter_follow_vibemodeai",
+        "twitter_follow_account1",
         undefined,
         "@vibemodeai"
       );
     }
-    if (follows.gremlinlabs) {
+    if (follows.followsAccount2) {
       await awardPoints(
         session.user.id,
-        "twitter_follow_gremlinlabs",
+        "twitter_follow_account2",
         undefined,
-        "@gremlinlabs"
+        "@thiscompany"
       );
     }
-    if (follows.productgremlin) {
+    if (follows.followsProductgremlin) {
       await awardPoints(
         session.user.id,
-        "twitter_follow_productgremlin",
+        "twitter_follow_account3",
         undefined,
         "@productgremlin"
       );

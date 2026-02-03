@@ -144,10 +144,10 @@ export function PointsGuideSheet({
                 href="https://twitter.com/vibemodeai"
               />
               <PointsTask
-                label="Follow @gremlinlabs"
+                label="Follow @thiscompany"
                 points={10}
                 completed={(currentPoints?.twitter ?? 0) >= 25}
-                href="https://twitter.com/gremlinlabs"
+                href="https://twitter.com/thiscompany"
               />
               <PointsTask
                 label="Follow @productgremlin"
@@ -179,10 +179,10 @@ export function PointsGuideSheet({
                 isInternal
               />
               <PointsTask
-                label="Join the Vibe Mode server"
+                label="Join the Amazing App server"
                 points={20}
                 completed={(currentPoints?.discord ?? 0) >= 25}
-                href="https://discord.gg/gremlinlabs"
+                href="https://discord.gg/thiscompany"
               />
               <p className="text-xs text-fg-dim mt-2 italic">
                 ⚠️ Leaving the server deducts points. Stay vibing!

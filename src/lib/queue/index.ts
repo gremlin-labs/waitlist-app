@@ -1,4 +1,4 @@
-import { Queue, Worker, QueueEvents } from "bullmq";
+import { Queue } from "bullmq";
 import IORedis from "ioredis";
 
 // Redis connection (singleton)

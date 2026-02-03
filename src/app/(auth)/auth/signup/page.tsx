@@ -1,9 +1,9 @@
 import { redirect } from "next/navigation";
 
 export default function SignUpPage({
-  searchParams,
+  _searchParams,
 }: {
-  searchParams: Promise<{ ref?: string }>;
+  _searchParams: Promise<{ ref?: string }>;
 }) {
   // Redirect to unified signin page, preserving referral code
   redirect("/auth/signin");

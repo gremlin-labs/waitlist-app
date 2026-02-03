@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ApplyButton } from "@/components/careers/apply-button";
 import {
@@ -52,7 +51,7 @@ Your job is to make it faster, support more architectures, and push Apple Silico
     type: "Full-time",
     team: "Platform",
     tagline: "100MB isn't small enough.",
-    description: `The Vibe Mode daemon is where the magic happens—inference, context management, file watching, WebSocket server, and terminal integration. All compiled into a single binary. All written in Zig.
+    description: `The Amazing App daemon is where the magic happens—inference, context management, file watching, WebSocket server, and terminal integration. All compiled into a single binary. All written in Zig.
 
 Your job is to make it faster, smaller, and more responsive. We're already under 100MB idle RAM and sub-second cold start. Your job is to make those numbers embarrassing for everyone else.`,
     responsibilities: [
@@ -83,11 +82,11 @@ Your job is to make it faster, smaller, and more responsive. We're already under
     type: "Full-time",
     team: "Frontend",
     tagline: "Make it beautiful. Make it 60fps.",
-    description: `Vibe Mode's interface is built in SwiftUI—not Electron, not React Native, not a web view pretending to be native. Real SwiftUI, with real macOS integration, targeting real performance.
+    description: `Amazing App's interface is built in SwiftUI—not Electron, not React Native, not a web view pretending to be native. Real SwiftUI, with real macOS integration, targeting real performance.
 
 You'll own the frontend experience: the editor, the chat interface, the terminal integration, the settings, all of it. Your job is to make it feel like it was built by Apple, but with more personality.`,
     responsibilities: [
-      "Build and maintain the Vibe Mode macOS frontend in SwiftUI",
+      "Build and maintain the Amazing App macOS frontend in SwiftUI",
       "Implement smooth animations and transitions at 60fps (no exceptions)",
       "Design and build the code editor interface with syntax highlighting",
       "Create responsive layouts that work across window sizes",
@@ -114,11 +113,11 @@ You'll own the frontend experience: the editor, the chat interface, the terminal
     type: "Full-time",
     team: "Web Platform",
     tagline: "Ship features, not node_modules.",
-    description: `This website isn't just marketing fluff—it's the backbone of Vibe Mode's user experience. Account management, subscription billing, OAuth integrations, Discord bot sync, admin dashboards, and app-web communication. All TypeScript, all modern, all fast.
+    description: `This website isn't just marketing fluff—it's the backbone of Amazing App's user experience. Account management, subscription billing, OAuth integrations, Discord bot sync, admin dashboards, and app-web communication. All TypeScript, all modern, all fast.
 
 You'll own the web platform end-to-end: the Next.js frontend, the Drizzle-powered backend, the real-time features, and the integration points between the web and the native app. If you think most web apps are bloated and slow, you'll fit right in.`,
     responsibilities: [
-      "Build and maintain the Vibe Mode web platform in Next.js 16 with React 19",
+      "Build and maintain the Amazing App web platform in Next.js 16 with React 19",
       "Design and implement database schemas with Drizzle ORM and PostgreSQL",
       "Create authenticated API routes and server actions with better-auth",
       "Build real-time features with BullMQ job queues and Redis",
@@ -147,14 +146,14 @@ You'll own the web platform end-to-end: the Next.js frontend, the Drizzle-powere
     type: "Full-time",
     team: "Growth",
     tagline: "Weaponize the mischief.",
-    description: `gremlinlabs has a voice: deviously confident, technically credible, self-aware about the "vibes" thing but dead serious about the engineering. We need someone who can amplify that voice across channels.
+    description: `This Company has a voice: deviously confident, technically credible, self-aware about the "vibes" thing but dead serious about the engineering. We need someone who can amplify that voice across channels.
 
-You'll own our marketing strategy—content, social, community, and developer relations. We're not looking for corporate-speak or growth hacking playbooks. We're looking for someone who understands developers and can make them care.`,
+    You'll own our marketing strategy—content, social, community, and developer relations. We're not looking for corporate-speak or growth hacking playbooks. We're looking for someone who understands developers and can make them care.`,
     responsibilities: [
       "Develop and execute marketing strategy across all channels",
       "Create content that resonates with technical audiences (blogs, videos, docs)",
       "Manage social presence on Twitter, Discord, and wherever developers lurk",
-      "Build and nurture the gremlinlabs community",
+      "Build and nurture the This Company community",
       "Plan and execute product launches and announcements",
       "Analyze metrics and optimize conversion funnels",
       "Collaborate with engineering to translate features into compelling narratives",
@@ -200,12 +199,12 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Why gremlinlabs */}
+      {/* Why This Company */}
       <section className="px-6 py-16">
         <div className="mx-auto max-w-3xl">
           <div className="rounded-md border border-border-subtle bg-surface-base p-8 md:p-12">
             <h2 className="mb-6 text-2xl font-bold text-fg-primary md:text-3xl">
-              Why gremlinlabs?
+              Why This Company?
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-fg-secondary">
               <p>
@@ -403,7 +402,7 @@ export default function CareersPage() {
             people.
           </p>
           <Button asChild variant="outline" size="lg" className="gap-2">
-            <a href="mailto:careers@gremlinlabs.dev?subject=General Application">
+            <a href="mailto:careers@thiscompany.dev?subject=General Application">
               Say Hello
               <ArrowRight className="h-4 w-4" />
             </a>

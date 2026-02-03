@@ -86,22 +86,22 @@ async function refreshTwitterConnections(userId?: string) {
       const follows = await checkTwitterFollows(accessToken, connection.twitterId);
 
       // Award/deduct points for changes
-      if (follows.vibemodeai !== connection.followsVibemodeai) {
+      if (follows.followsAccount1 !== connection.followsAccount1) {
         await awardPoints(
           connection.userId,
-          follows.vibemodeai ? "twitter_follow_vibemodeai" : "twitter_unfollow_vibemodeai"
+          follows.followsAccount1 ? "twitter_follow_account1" : "twitter_unfollow_account1"
         );
       }
-      if (follows.gremlinlabs !== connection.followsGremlinlabs) {
+      if (follows.followsAccount2 !== connection.followsAccount2) {
         await awardPoints(
           connection.userId,
-          follows.gremlinlabs ? "twitter_follow_gremlinlabs" : "twitter_unfollow_gremlinlabs"
+          follows.followsAccount2 ? "twitter_follow_account2" : "twitter_unfollow_account2"
         );
       }
-      if (follows.productgremlin !== connection.followsProductgremlin) {
+      if (follows.followsProductgremlin !== connection.followsProductgremlin) {
         await awardPoints(
           connection.userId,
-          follows.productgremlin ? "twitter_follow_productgremlin" : "twitter_unfollow_productgremlin"
+          follows.followsProductgremlin ? "twitter_follow_account3" : "twitter_unfollow_productgremlin"
         );
       }
 
@@ -109,9 +109,9 @@ async function refreshTwitterConnections(userId?: string) {
       await db
         .update(twitterConnections)
         .set({
-          followsVibemodeai: follows.vibemodeai,
-          followsGremlinlabs: follows.gremlinlabs,
-          followsProductgremlin: follows.productgremlin,
+          followsAccount1: follows.followsAccount1,
+          followsAccount2: follows.followsAccount2,
+          followsProductgremlin: follows.followsProductgremlin,
           followsLastChecked: new Date(),
           updatedAt: new Date(),
         })

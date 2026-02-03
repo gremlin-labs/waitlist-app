@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Cpu, Timer, Gauge, HardDrive, ArrowRight } from "lucide-react";
 
@@ -265,7 +264,7 @@ export default function BenchmarksPage() {
               Bundle & Resource Comparison
             </h2>
             <p className="text-sm text-fg-muted mb-6">
-              How Vibe Mode compares to popular AI coding assistants.
+              How Amazing App compares to popular AI coding assistants.
             </p>
 
             <div className="overflow-x-auto">
@@ -273,7 +272,7 @@ export default function BenchmarksPage() {
                 <thead>
                   <tr className="border-b border-border-subtle">
                     <th className="label-uppercase p-3 text-left">Metric</th>
-                    <th className="label-uppercase p-3 text-right text-green">Vibe Mode</th>
+                    <th className="label-uppercase p-3 text-right text-green">Amazing App</th>
                     <th className="label-uppercase p-3 text-right text-fg-dim">Other Tools*</th>
                   </tr>
                 </thead>
@@ -324,7 +323,7 @@ export default function BenchmarksPage() {
 
             <div className="mt-6 flex justify-end">
               <a
-                href="https://discord.gg/gremlinlabs"
+                href="https://discord.gg/thiscompany"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-pink hover:underline"

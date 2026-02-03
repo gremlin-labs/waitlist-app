@@ -65,15 +65,15 @@ export default function PrivacyPage() {
                 <h2 className="mb-6 text-2xl font-bold text-fg-primary">Introduction</h2>
                 <div className="space-y-4 text-fg-secondary">
                   <p>
-                    We at gremlinlabs, Inc. (&ldquo;<strong className="text-fg-primary">gremlinlabs</strong>&rdquo;, 
+                    We at This Company, Inc. (&ldquo;<strong className="text-fg-primary">This Company</strong>&rdquo;, 
                     &ldquo;<strong className="text-fg-primary">we</strong>&rdquo; or 
                     &ldquo;<strong className="text-fg-primary">us</strong>&rdquo;) are strongly committed to 
                     respecting your privacy and keeping secure any information you share with us. This privacy 
                     policy (&ldquo;<strong className="text-fg-primary">Privacy Policy</strong>&rdquo;) explains 
-                    how we collect, use, disclose, and process your personal data when you use gremlinlabs&apos;s 
-                    software, platform, APIs, documentation, and related tools, including at the website at 
-                    vibemode.ai, and all related software made available by gremlinlabs to build, deploy, and 
-                    manage software projects (&ldquo;<strong className="text-fg-primary">Service</strong>&rdquo;). 
+                    how we collect, use, disclose, and process your personal data when you use This Company&apos;s 
+                    software, platform, APIs, documentation, and related tools, including at the website at
+                    waitlist.example.com, and all related software made available by This Company to build, deploy, and
+                    manage software projects (&ldquo;<strong className="text-fg-primary">Service</strong>&rdquo;).
                     It also tells you how you can access and update your personal information and describes the 
                     data protection rights that may be available under your country&apos;s or state&apos;s laws.
                   </p>
@@ -83,9 +83,9 @@ export default function PrivacyPage() {
                     and data.
                   </p>
                   <p>
-                    Please note that this Privacy Policy does not apply where gremlinlabs acts as a data processor 
+                    Please note that this Privacy Policy does not apply where This Company acts as a data processor 
                     and processes personal data on behalf of commercial customers using our commercial services, 
-                    for example, if your employer has provisioned a Vibe Mode account for you to use at work. Our 
+                    for example, if your employer has provisioned a Amazing App account for you to use at work. Our 
                     use of that data is governed by our customer agreements covering access to and use of those 
                     offerings.
                   </p>
@@ -108,13 +108,13 @@ export default function PrivacyPage() {
                     </p>
                     <ul className="list-disc space-y-3 pl-6">
                       <li>
-                        <strong className="text-fg-primary">Account Information:</strong> gremlinlabs collects 
-                        identifiers, such as your name and email address, when you sign up for a gremlinlabs 
+                        <strong className="text-fg-primary">Account Information:</strong> This Company collects 
+                        identifiers, such as your name and email address, when you sign up for a This Company 
                         account or to receive information about our Service.
                       </li>
                       <li>
                         <strong className="text-fg-primary">Payment Information:</strong> We collect your payment 
-                        information if you seek to access any paid gremlinlabs products and services.
+                        information if you seek to access any paid This Company products and services.
                       </li>
                       <li>
                         <strong className="text-fg-primary">Inputs and Suggestions:</strong> The Service allows 
@@ -179,9 +179,9 @@ export default function PrivacyPage() {
                       C. Information we do not collect
                     </h3>
                     <p>
-                      gremlinlabs does not knowingly collect sensitive or special category personal information, 
+                      This Company does not knowingly collect sensitive or special category personal information, 
                       such as genetic data, biometric data for the purposes of uniquely identifying a natural person, 
-                      health information, or religious information. Additionally, gremlinlabs does not knowingly 
+                      health information, or religious information. Additionally, This Company does not knowingly 
                       collect information from or direct any of our Service or content to children under the age of 18.
                     </p>
                   </div>
@@ -193,7 +193,7 @@ export default function PrivacyPage() {
                 <h2 className="mb-6 text-2xl font-bold text-fg-primary">2. Telemetry data</h2>
                 <div className="space-y-4 text-fg-secondary">
                   <p>
-                    Vibe Mode includes an optional telemetry system designed to improve performance 
+                    Amazing App includes an optional telemetry system designed to improve performance 
                     recommendations and help us understand how the application is used.{" "}
                     <strong className="text-fg-primary">Telemetry is disabled by default</strong> and 
                     must be explicitly enabled by the user.
@@ -215,7 +215,7 @@ export default function PrivacyPage() {
                       </li>
                       <li>
                         <strong className="text-fg-primary">Anonymous:</strong> Aggregated, anonymized statistics 
-                        are uploaded to help improve Vibe Mode. No individual usage patterns or content are transmitted.
+                        are uploaded to help improve Amazing App. No individual usage patterns or content are transmitted.
                       </li>
                       <li>
                         <strong className="text-fg-primary">Detailed:</strong> Includes additional model performance 
@@ -267,7 +267,7 @@ export default function PrivacyPage() {
                     <li>To improve and develop the Service and conduct research, including debugging and identifying or repairing issues that impair functionality.</li>
                     <li>To communicate with you, including sending updates, information about the Service, and events.</li>
                     <li>To prevent, detect, and investigate fraud, abuse, security incidents, and violations of our Terms of Service.</li>
-                    <li>To comply with legal obligations and protect the rights, safety, privacy, and property of users, gremlinlabs, or third parties.</li>
+                    <li>To comply with legal obligations and protect the rights, safety, privacy, and property of users, This Company, or third parties.</li>
                     <li>To investigate and resolve disputes or security issues.</li>
                     <li>To enforce our Terms of Service and other applicable agreements.</li>
                   </ul>
@@ -329,7 +329,7 @@ export default function PrivacyPage() {
                 <h2 className="mb-6 text-2xl font-bold text-fg-primary">5. Retention</h2>
                 <div className="space-y-4 text-fg-secondary">
                   <p>
-                    gremlinlabs retains your personal data only for as long as necessary to operate the Service 
+                    This Company retains your personal data only for as long as necessary to operate the Service 
                     effectively and to support legitimate business needs such as legal compliance, safety, dispute 
                     resolution, and enforcement of our agreements.
                   </p>
@@ -339,7 +339,7 @@ export default function PrivacyPage() {
                     applicable legal requirements.
                   </p>
                   <p>
-                    When personal data is no longer needed, gremlinlabs and its service providers will follow 
+                    When personal data is no longer needed, This Company and its service providers will follow 
                     procedures to delete, erase, de-identify, or anonymize it in compliance with applicable laws.
                   </p>
                 </div>
@@ -399,8 +399,8 @@ export default function PrivacyPage() {
                   </ul>
                   <p className="mt-6">
                     To exercise any of these rights, you or your authorized agent may contact us at{" "}
-                    <a href="mailto:support@gremlinlabs.com" className="text-pink hover:text-pink-bright">
-                      support@gremlinlabs.com
+                    <a href="mailto:support@This Company.com" className="text-pink hover:text-pink-bright">
+                      support@This Company.com
                     </a>. 
                     We may request information to verify your identity before processing your request.
                   </p>
@@ -421,7 +421,7 @@ export default function PrivacyPage() {
                 <h2 className="mb-6 text-2xl font-bold text-fg-primary">8. Jurisdiction-specific disclosures</h2>
                 <div className="space-y-4 text-fg-secondary">
                   <p>
-                    gremlinlabs processes your personal data for the purposes described in this Privacy Policy on 
+                    This Company processes your personal data for the purposes described in this Privacy Policy on 
                     servers located in various jurisdictions, including in the United States. While data protection 
                     laws vary by country, we apply the protections outlined in this policy to your personal data 
                     regardless of where it is processed, and we only transfer data in accordance with legally valid 
@@ -461,14 +461,14 @@ export default function PrivacyPage() {
                   </p>
                   <p>
                     <strong className="text-fg-primary">Email:</strong>{" "}
-                    <a href="mailto:support@gremlinlabs.com" className="text-pink hover:text-pink-bright">
-                      support@gremlinlabs.com
+                    <a href="mailto:support@This Company.com" className="text-pink hover:text-pink-bright">
+                      support@This Company.com
                     </a>
                   </p>
                   <p>
                     <strong className="text-fg-primary">Address:</strong>
                     <br />
-                    gremlinlabs, Inc.
+                    This Company, Inc.
                     <br />
                     Los Angeles, CA
                     <br />

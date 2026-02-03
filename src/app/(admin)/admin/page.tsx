@@ -133,7 +133,7 @@ export default async function AdminDashboard() {
           <CardContent>
             <div className="text-3xl font-bold text-green">{stats.active.toLocaleString()}</div>
             <p className="text-xs text-fg-dim mt-1">
-              Using Vibe Mode
+              Using Amazing App
             </p>
           </CardContent>
         </Card>

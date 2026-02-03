@@ -84,7 +84,7 @@ export async function POST() {
         "discord_join_server",
         undefined,
         "vibemode",
-        "Joined Vibe Mode Discord server"
+        "Joined Amazing App Discord server"
       );
       changes.push("joined server");
     } else if (!hasJoinedServer && connection.hasJoinedServer) {
@@ -93,7 +93,7 @@ export async function POST() {
         "discord_leave_server",
         undefined,
         "vibemode",
-        "Left Vibe Mode Discord server"
+        "Left Amazing App Discord server"
       );
       changes.push("left server");
     }

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/db";
 import { user, betaSurveys } from "@/db/schema";
-import { count, eq, sql, gte, and, isNotNull } from "drizzle-orm";
+import { count, sql, gte, isNotNull } from "drizzle-orm";
 import { requireAdmin } from "@/lib/admin";
 
 // GET: Survey and user analytics

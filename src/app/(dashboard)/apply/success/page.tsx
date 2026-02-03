@@ -83,7 +83,7 @@ export default async function ApplicationSuccessPage({
             <p className="text-fg-muted">
               {alreadyApplied
                 ? "We have your application on file."
-                : "Thanks for applying to gremlinlabs."}
+                : "Thanks for applying to This Company."}
             </p>
           </div>
 

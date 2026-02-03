@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 /**
  * CLI script to remove seeded demo users from the database
- * Removes users with emails matching demo-*@vibemode.ai
+ * Removes users with emails matching demo-*@example.com
  *
  * Usage:
  *   bun run unseed:users           # Remove all demo users (with confirmation)
@@ -42,7 +42,7 @@ const args = process.argv.slice(2);
 const forceFlag = args.includes("--force") || args.includes("-f");
 const dryRunFlag = args.includes("--dry-run") || args.includes("-n");
 
-const DEMO_EMAIL_PATTERN = "demo-%@vibemode.ai";
+const DEMO_EMAIL_PATTERN = "demo-%@example.com";
 
 async function promptConfirmation(message: string): Promise<boolean> {
   const rl = readline.createInterface({
@@ -92,7 +92,7 @@ async function removeDemoUsers(): Promise<number> {
 }
 
 async function main() {
-  console.log("\n😈 Vibe Mode Demo User Remover\n");
+  console.log("\n😈 Amazing App Demo User Remover\n");
 
   // Count demo users
   const demoUserCount = await countDemoUsers();
@@ -149,9 +149,9 @@ async function main() {
 // Show help if requested
 if (args.includes("--help") || args.includes("-h")) {
   console.log(`
-😈 Vibe Mode Demo User Remover
+😈 Amazing App Demo User Remover
 
-Removes seeded demo users (emails matching demo-*@vibemode.ai)
+Removes seeded demo users (emails matching demo-*@example.com)
 
 Usage:
   bun run unseed:users              Remove all demo users (with confirmation)

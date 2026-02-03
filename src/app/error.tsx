@@ -42,7 +42,7 @@ export default function Error({
 
           <Button variant="outline" size="lg" asChild>
             <a
-              href="https://discord.gg/gremlinlabs"
+              href="https://discord.gg/thiscompany"
               target="_blank"
               rel="noopener noreferrer"
               className="gap-2"

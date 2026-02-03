@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
 import { user as userTable } from "@/db/schema";
-import { eq, inArray } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { requireAdmin } from "@/lib/admin";
 import { Resend } from "resend";
 
@@ -45,10 +45,10 @@ export async function POST(request: NextRequest) {
 
     // Send invite email
     if (sendEmail && process.env.RESEND_API_KEY) {
-      const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.BETTER_AUTH_URL || "https://vibemode.ai";
+      const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.BETTER_AUTH_URL || "https://waitlist.example.com";
       try {
         await resend.emails.send({
-          from: process.env.FROM_EMAIL || "Vibe Mode <hey@vibemode.ai>",
+          from: process.env.FROM_EMAIL || "Waitlist <noreply@example.com>",
           to: foundUser.email,
           subject: "😈 You're in. The vibes have aligned.",
           html: betaInviteEmailTemplate(foundUser.name || "Vibe Seeker", baseUrl),
@@ -90,7 +90,7 @@ function betaInviteEmailTemplate(name: string, baseUrl: string): string {
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 520px;">
               <tr>
                 <td align="center" style="padding-bottom: 32px;">
-                  <span style="font-size: 14px; font-weight: 700; letter-spacing: 2px; color: #ff2d7a; text-transform: uppercase;">VIBE MODE</span>
+                  <span style="font-size: 14px; font-weight: 700; letter-spacing: 2px; color: #ff2d7a; text-transform: uppercase;">AMAZING APP</span>
                 </td>
               </tr>
             </table>
@@ -133,7 +133,7 @@ function betaInviteEmailTemplate(name: string, baseUrl: string): string {
                         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                           <tr>
                             <td style="padding: 8px 0; font-size: 14px; color: #8888a0;">
-                              <span style="color: #ff2d7a; font-weight: 600;">1.</span> Download the Vibe Mode app from your dashboard
+                              <span style="color: #ff2d7a; font-weight: 600;">1.</span> Download the Amazing App app from your dashboard
                             </td>
                           </tr>
                           <tr>
@@ -162,7 +162,7 @@ function betaInviteEmailTemplate(name: string, baseUrl: string): string {
                     Built from scratch. No forks. No compromises.
                   </p>
                   <p style="margin: 8px 0 0 0; font-size: 12px; color: #444455; font-family: 'SF Mono', monospace;">
-                    — gremlinlabs
+                    — This Company
                   </p>
                 </td>
               </tr>

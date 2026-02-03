@@ -65,7 +65,7 @@ export function AuthorizeDeviceDialog({
             Device Authorized
           </CardTitle>
           <CardDescription>
-            Copy this token and paste it in the Vibe Mode app
+            Copy this token and paste it in the Amazing App app
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

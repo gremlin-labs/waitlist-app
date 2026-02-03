@@ -76,7 +76,7 @@ export function BetaUserDashboard({ user, devices: initialDevices }: BetaUserDas
             You&apos;re In
           </h1>
           <p className="text-fg-muted">
-            Welcome to Vibe Mode, {user.name}
+            Welcome to Amazing App, {user.name}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -125,7 +125,7 @@ export function BetaUserDashboard({ user, devices: initialDevices }: BetaUserDas
         <CardHeader>
           <CardTitle className="text-lg">Resources</CardTitle>
           <CardDescription>
-            Get the most out of Vibe Mode
+            Get the most out of Amazing App
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -141,7 +141,7 @@ export function BetaUserDashboard({ user, devices: initialDevices }: BetaUserDas
               </div>
             </a>
             <a
-              href="https://discord.gg/gremlinlabs"
+              href="https://discord.gg/This Company"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-3 rounded-sm border border-border-subtle bg-surface-raised hover:border-border-default transition-colors"

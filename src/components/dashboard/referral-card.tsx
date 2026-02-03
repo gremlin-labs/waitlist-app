@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Copy, Check, Share2, Twitter, Users } from "lucide-react";
+import { Copy, Check, Share2, Twitter } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -17,7 +17,7 @@ export function ReferralCard({
   referralSignups,
 }: ReferralCardProps) {
   const [copied, setCopied] = useState(false);
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://vibemode.ai";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://waitlist.example.com";
   const referralLink = `${baseUrl}/join/${referralCode}`;
 
   const handleCopy = async () => {
@@ -64,7 +64,7 @@ export function ReferralCard({
           <p className="text-xs text-fg-dim mb-2">Your referral link:</p>
           <div className="flex gap-2">
             <div className="flex-1 bg-bg-surface border border-border-subtle rounded-md px-3 py-2 font-mono text-sm text-fg-muted truncate">
-              vibemode.ai/join/{referralCode}
+              waitlist.example.com/join/{referralCode}
             </div>
             <Button
               variant="outline"
@@ -86,7 +86,7 @@ export function ReferralCard({
           <Button variant="outline" asChild className="gap-2">
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                "I'm on the waitlist for Vibe Mode — the native AI IDE built from scratch. No forks, no wrappers. Join me:"
+                "I'm on the waitlist for Amazing App — the native AI IDE built from scratch. No forks, no wrappers. Join me:"
               )}&url=${encodeURIComponent(referralLink)}`}
               target="_blank"
               rel="noopener noreferrer"

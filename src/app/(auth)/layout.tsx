@@ -25,7 +25,7 @@ export default function AuthLayout({
       {/* Footer */}
       <footer className="p-6 text-center">
         <p className="font-mono text-sm text-fg-dim">
-          Built by <span className="text-pink">gremlinlabs</span>
+          Built by <span className="text-pink">This Company</span>
         </p>
       </footer>
     </div>

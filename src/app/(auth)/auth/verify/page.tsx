@@ -103,7 +103,7 @@ function VerifyContent() {
         </div>
         <CardTitle className="text-2xl text-green">You&apos;re in!</CardTitle>
         <CardDescription>
-          Welcome to Vibe Mode
+          Welcome to Amazing App
         </CardDescription>
       </CardHeader>
       <CardContent className="text-center">

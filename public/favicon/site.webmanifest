@@ -1,7 +1,7 @@
 {
-  "name": "Vibe Mode",
-  "short_name": "Vibe Mode",
-  "description": "Lightning Fast Vibe IDE for macOS",
+  "name": "Amazing App",
+  "short_name": "Amazing App",
+  "description": "A Wonderful App",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",

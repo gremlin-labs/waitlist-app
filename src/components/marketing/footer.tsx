@@ -16,7 +16,7 @@ export function Footer() {
               Native AI IDE for macOS
             </p>
             <p className="mt-1 font-mono text-xs text-fg-dim">
-              Built by gremlinlabs
+              Built by This Company
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="text-center md:text-left">
               <p className="font-mono text-sm text-fg-dim">
-                © 2026 gremlinlabs. All rights reserved.
+                © 2026 This Company. All rights reserved.
               </p>
               <p className="mt-1 font-mono text-xs text-fg-dim">
                 Made with weaponized mischief in Los Angeles.
@@ -138,7 +138,7 @@ export function Footer() {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="https://discord.gg/gremlinlabs"
+                href="https://discord.gg/thiscompany"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-fg-muted hover:text-fg-primary transition-colors"

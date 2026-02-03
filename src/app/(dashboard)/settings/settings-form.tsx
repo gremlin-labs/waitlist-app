@@ -60,7 +60,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
   const [signingOut, setSigningOut] = useState(false);
 
   const router = useRouter();
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://vibemode.ai";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://waitlist.example.com";
   const timezones = getTimezones();
   const hasChanges =
     formData.name !== initialData.name ||
@@ -203,7 +203,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
             Username
           </CardTitle>
           <CardDescription>
-            Your unique handle - visible at vibemode.ai/{username || "username"}
+            Your unique handle - visible at waitlist.example.com/{username || "username"}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -261,7 +261,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
           <div className="p-3 rounded-md bg-bg-elevated border border-border-subtle flex items-center justify-between gap-2">
             <p className="text-sm text-fg-muted">
               Your public profile:{" "}
-              <span className="font-mono text-pink">vibemode.ai/{username || "username"}</span>
+              <span className="font-mono text-pink">waitlist.example.com/{username || "username"}</span>
             </p>
             <div className="flex items-center gap-1">
               <Button
@@ -404,7 +404,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
             </Label>
             <div className="flex gap-2">
               <Input
-                value={`vibemode.ai/join/${initialData.referralCode}`}
+                value={`waitlist.example.com/join/${initialData.referralCode}`}
                 disabled
                 className="bg-bg-elevated text-fg-muted font-mono text-sm"
               />

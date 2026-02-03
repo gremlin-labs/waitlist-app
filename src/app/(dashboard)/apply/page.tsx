@@ -57,7 +57,7 @@ export default async function ApplyPage({
       <div className="mb-8">
         <p className="text-pink font-mono text-sm mb-2">JOIN THE TEAM</p>
         <h1 className="text-3xl font-bold text-fg-primary mb-2">
-          Apply to gremlinlabs
+          Apply to This Company
         </h1>
         <p className="text-fg-muted">
           Most job applications suck. This one doesn&apos;t.

@@ -83,28 +83,28 @@ export async function POST() {
     const changes: string[] = [];
 
     // @vibemodeai
-    if (follows.vibemodeai && !connection.followsVibemodeai) {
-      await awardPoints(session.user.id, "twitter_follow_vibemodeai");
+    if (follows.followsAccount1 && !connection.followsAccount1) {
+      await awardPoints(session.user.id, "twitter_follow_account1");
       changes.push("followed @vibemodeai");
-    } else if (!follows.vibemodeai && connection.followsVibemodeai) {
-      await awardPoints(session.user.id, "twitter_unfollow_vibemodeai");
+    } else if (!follows.followsAccount1 && connection.followsAccount1) {
+      await awardPoints(session.user.id, "twitter_unfollow_account1");
       changes.push("unfollowed @vibemodeai");
     }
 
-    // @gremlinlabs
-    if (follows.gremlinlabs && !connection.followsGremlinlabs) {
-      await awardPoints(session.user.id, "twitter_follow_gremlinlabs");
-      changes.push("followed @gremlinlabs");
-    } else if (!follows.gremlinlabs && connection.followsGremlinlabs) {
-      await awardPoints(session.user.id, "twitter_unfollow_gremlinlabs");
-      changes.push("unfollowed @gremlinlabs");
+    // @thiscompany
+    if (follows.followsAccount2 && !connection.followsAccount2) {
+      await awardPoints(session.user.id, "twitter_follow_account2");
+      changes.push("followed @thiscompany");
+    } else if (!follows.followsAccount2 && connection.followsAccount2) {
+      await awardPoints(session.user.id, "twitter_unfollow_account2");
+      changes.push("unfollowed @thiscompany");
     }
 
     // @productgremlin
-    if (follows.productgremlin && !connection.followsProductgremlin) {
-      await awardPoints(session.user.id, "twitter_follow_productgremlin");
+    if (follows.followsProductgremlin && !connection.followsProductgremlin) {
+      await awardPoints(session.user.id, "twitter_follow_account3");
       changes.push("followed @productgremlin");
-    } else if (!follows.productgremlin && connection.followsProductgremlin) {
+    } else if (!follows.followsProductgremlin && connection.followsProductgremlin) {
       await awardPoints(session.user.id, "twitter_unfollow_productgremlin");
       changes.push("unfollowed @productgremlin");
     }
@@ -113,9 +113,9 @@ export async function POST() {
     await db
       .update(twitterConnections)
       .set({
-        followsVibemodeai: follows.vibemodeai,
-        followsGremlinlabs: follows.gremlinlabs,
-        followsProductgremlin: follows.productgremlin,
+        followsAccount1: follows.followsAccount1,
+        followsAccount2: follows.followsAccount2,
+        followsProductgremlin: follows.followsProductgremlin,
         followsLastChecked: new Date(),
         updatedAt: new Date(),
       })
@@ -155,8 +155,8 @@ export async function GET() {
         twitterUsername: true,
         twitterDisplayName: true,
         twitterAvatarUrl: true,
-        followsVibemodeai: true,
-        followsGremlinlabs: true,
+        followsAccount1: true,
+        followsAccount2: true,
         followsProductgremlin: true,
         followsLastChecked: true,
         connectedAt: true,
@@ -173,8 +173,8 @@ export async function GET() {
       displayName: connection.twitterDisplayName,
       avatarUrl: connection.twitterAvatarUrl,
       follows: {
-        vibemodeai: connection.followsVibemodeai,
-        gremlinlabs: connection.followsGremlinlabs,
+        account1: connection.followsAccount1,
+        account2: connection.followsAccount2,
         productgremlin: connection.followsProductgremlin,
       },
       lastChecked: connection.followsLastChecked,

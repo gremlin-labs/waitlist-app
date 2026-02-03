@@ -21,8 +21,8 @@ interface PointsBreakdown {
 interface TwitterStatus {
   connected: boolean;
   username?: string;
-  followsVibemodeai: boolean;
-  followsGremlinlabs: boolean;
+  followsAccount1: boolean;
+  followsAccount2: boolean;
   followsProductgremlin: boolean;
 }
 

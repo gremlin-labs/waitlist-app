@@ -107,8 +107,8 @@ export async function GET(req: NextRequest) {
     ? await db
         .select({
           userId: twitterConnections.userId,
-          followsVibemodeai: twitterConnections.followsVibemodeai,
-          followsGremlinlabs: twitterConnections.followsGremlinlabs,
+          followsAccount1: twitterConnections.followsAccount1,
+          followsAccount2: twitterConnections.followsAccount2,
           followsProductgremlin: twitterConnections.followsProductgremlin,
         })
         .from(twitterConnections)
@@ -154,8 +154,8 @@ export async function GET(req: NextRequest) {
       twitter: twitter
         ? {
             connected: true,
-            followsVibemodeai: twitter.followsVibemodeai,
-            followsGremlinlabs: twitter.followsGremlinlabs,
+            followsAccount1: twitter.followsAccount1,
+            followsAccount2: twitter.followsAccount2,
             followsProductgremlin: twitter.followsProductgremlin,
           }
         : null,

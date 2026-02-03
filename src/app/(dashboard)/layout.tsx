@@ -38,7 +38,7 @@ export default function DashboardLayout({
       <footer className="border-t border-border-subtle mt-auto">
         <div className="mx-auto max-w-5xl px-6 py-6 text-center">
           <p className="font-mono text-sm text-fg-dim">
-            Built by <span className="text-pink">gremlinlabs</span>
+            Built by <span className="text-pink">This Company</span>
           </p>
         </div>
       </footer>

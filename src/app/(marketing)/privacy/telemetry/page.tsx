@@ -62,7 +62,7 @@ const MACHINE_PROFILE = [
   { field: "total_ram_gb", description: "Total system RAM", example: "128" },
   { field: "memory_bandwidth_gbps", description: "Memory bandwidth", example: "400" },
   { field: "macos_version", description: "macOS version", example: "15.7.2" },
-  { field: "vibe_version", description: "Vibe Mode version", example: "0.1.0" },
+  { field: "vibe_version", description: "Amazing App version", example: "0.1.0" },
 ];
 
 const SESSION_INFO = [
@@ -144,7 +144,7 @@ export default function TelemetryPage() {
             Telemetry Data Collection
           </h1>
           <p className="mt-4 text-xl text-fg-muted">
-            Complete transparency on what Vibe Mode collects — and what it doesn&apos;t.
+            Complete transparency on what Amazing App collects — and what it doesn&apos;t.
           </p>
         </div>
       </section>
@@ -495,10 +495,10 @@ export default function TelemetryPage() {
               For questions about telemetry data collection or to request data deletion:
             </p>
             <a 
-              href="mailto:support@gremlinlabs.com" 
+              href="mailto:support@This Company.com" 
               className="inline-flex items-center gap-2 text-pink hover:text-pink-bright transition-colors"
             >
-              support@gremlinlabs.com
+              support@This Company.com
             </a>
           </div>
         </div>

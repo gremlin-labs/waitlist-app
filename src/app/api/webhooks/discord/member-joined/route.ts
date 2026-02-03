@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (!connection) {
-      // User not linked to Vibe Mode yet
+      // User not linked to Amazing App yet
       console.log(`Discord user ${discordUsername} (${discordId}) joined but not linked`);
       return NextResponse.json({ success: true, linked: false });
     }
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
       "discord_join_server",
       undefined,
       discordId,
-      "Joined Vibe Mode Discord server (bot detected)"
+      "Joined Amazing App Discord server (bot detected)"
     );
 
     // Update connection

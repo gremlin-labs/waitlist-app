@@ -4,7 +4,7 @@ import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { db } from "@/db";
 import { discordConnections, discordGuildMemberships, discordGuildStats } from "@/db/schema";
-import { eq, and, sql } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { encrypt } from "@/lib/crypto";
 import { awardPoints } from "@/lib/points";
 import {
@@ -204,7 +204,7 @@ export async function GET(request: NextRequest) {
         "discord_join_server",
         undefined,
         "vibemode",
-        "Joined Vibe Mode Discord server"
+        "Joined Amazing App Discord server"
       );
     }
 

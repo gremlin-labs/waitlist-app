@@ -40,7 +40,7 @@ async function cleanDatabase() {
 
   for (const table of tables) {
     try {
-      const result = await sql`TRUNCATE TABLE ${sql(table)} CASCADE`;
+      await sql`TRUNCATE TABLE ${sql(table)} CASCADE`;
       console.log(`  ✓ Truncated ${table}`);
     } catch (error: unknown) {
       const err = error as { code?: string; message?: string };

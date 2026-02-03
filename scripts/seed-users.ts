@@ -267,7 +267,7 @@ function generateDemoUser(existingUsernames: Set<string>) {
   return {
     id: crypto.randomUUID(),
     name: `${firstName} ${lastName}`,
-    email: `demo-${randomSuffix}@vibemode.ai`,
+    email: `demo-${randomSuffix}@example.com`,
     emailVerified: true,
     username: generateUsername(existingUsernames),
     referralCode: generateReferralCode(),
@@ -342,7 +342,7 @@ async function seedUsers(count: number) {
 async function main() {
   if (!countArg || isNaN(parseInt(countArg))) {
     console.log(`
-😈 Vibe Mode User Seeder
+😈 Amazing App User Seeder
 
 Usage:
   bun run seed:users <count>
@@ -352,7 +352,7 @@ Examples:
   bun run seed:users 100    # Create 100 demo users
   bun run seed:users 500    # Create 500 demo users (for load testing)
 
-Note: Demo users have emails like demo-xxxxx@vibemode.ai
+Note: Demo users have emails like demo-xxxxx@example.com
       and are distinguishable from real users.
     `);
     process.exit(0);

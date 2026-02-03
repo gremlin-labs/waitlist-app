@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://vibemode.ai";
+  const baseUrl = "https://waitlist.example.com";
 
   // Static pages
   const staticPages = [

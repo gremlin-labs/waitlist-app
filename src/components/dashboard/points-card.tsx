@@ -1,6 +1,6 @@
 "use client";
 
-import { Trophy, Twitter, MessageCircle, Share2, ClipboardCheck, Gift, HelpCircle } from "lucide-react";
+import { Trophy, Twitter, MessageCircle, Share2, ClipboardCheck, Gift } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PointsGuideSheet } from "./points-guide-sheet";
 

@@ -25,11 +25,11 @@ if (!process.env.DISCORD_BOT_TOKEN || !process.env.DISCORD_CLIENT_ID) {
 const commands = [
   new SlashCommandBuilder()
     .setName("verify")
-    .setDescription("Check if your Discord is linked to Vibe Mode"),
+    .setDescription("Check if your Discord is linked to Amazing App"),
 
   new SlashCommandBuilder()
     .setName("leaderboard")
-    .setDescription("View the top 10 on the Vibe Mode waitlist"),
+    .setDescription("View the top 10 on the Amazing App waitlist"),
 
   new SlashCommandBuilder()
     .setName("rank")

@@ -1,6 +1,6 @@
 import { db } from "@/db";
 import { user } from "@/db/schema";
-import { eq, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
 import fs from "fs";
 import path from "path";
 
@@ -64,13 +64,10 @@ export const RESERVED_USERNAMES = new Set([
   "internal",
   
   // Brand/product
-  "vibemode",
-  "vibe-mode",
-  "gremlinlabs",
+  "waitlist",
+  "wait-list",
+  "thiscompany",
   "gremlin-labs",
-  "vibemlx",
-  "samsara",
-  "ghostty",
   
   // Common reserved
   "www",

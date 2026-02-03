@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 import { db } from "@/db";
-import { discordGuildMemberships, discordGuildStats } from "@/db/schema";
+import { discordGuildMemberships } from "@/db/schema";
 import { sql, desc } from "drizzle-orm";
 
 /**

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/db";
-import { user, betaSurveys } from "@/db/schema";
-import { eq, desc, asc, like, count, sql, and, not } from "drizzle-orm";
+import { user } from "@/db/schema";
+import { eq, desc, asc, like, count, sql, not } from "drizzle-orm";
 import { requireAdmin } from "@/lib/admin";
 
 // GET: List all users with pagination and filtering
@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
       conditions.push(eq(user.betaStatus, status));
     }
     if (hideDemoUsers) {
-      conditions.push(not(like(user.email, "demo-%@vibemode.ai")));
+      conditions.push(not(like(user.email, "demo-%@example.com")));
     }
 
     // Get total count

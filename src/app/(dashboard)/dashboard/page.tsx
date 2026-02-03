@@ -70,8 +70,8 @@ async function getSocialConnections(userId: string) {
       ? {
           connected: true,
           username: twitter.twitterUsername,
-          followsVibemodeai: twitter.followsVibemodeai ?? false,
-          followsGremlinlabs: twitter.followsGremlinlabs ?? false,
+          followsAccount1: twitter.followsAccount1 ?? false,
+          followsAccount2: twitter.followsAccount2 ?? false,
           followsProductgremlin: twitter.followsProductgremlin ?? false,
         }
       : null,

@@ -42,7 +42,7 @@ export default async function OnboardingPage() {
         </h1>
         <p className="text-fg-muted max-w-md mx-auto">
           Help us understand you better so we can prioritize your access and 
-          tailor Vibe Mode to your needs.
+          tailor Amazing App to your needs.
         </p>
       </div>
 

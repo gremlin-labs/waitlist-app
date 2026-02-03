@@ -22,7 +22,7 @@ export function DownloadSection({
   return (
     <Card className="border-pink bg-pink-ghost">
       <CardHeader className="text-center pb-2">
-        <CardTitle className="text-2xl">Download Vibe Mode</CardTitle>
+        <CardTitle className="text-2xl">Download Amazing App</CardTitle>
         <CardDescription>
           Native inference engine for Apple Silicon
         </CardDescription>

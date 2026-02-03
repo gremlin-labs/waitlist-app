@@ -3,7 +3,6 @@ import {
   text,
   timestamp,
   boolean,
-  uuid,
   integer,
 } from "drizzle-orm/pg-core";
 
@@ -65,7 +64,7 @@ export const user = pgTable("user", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
   
-  // Custom fields for Vibe Mode
+  // Custom fields for waitlist
   username: text("username").unique(), // Auto-generated, user-editable handle (e.g., swift-wolf)
   isAdmin: boolean("is_admin").default(false),
   betaStatus: text("beta_status").default("waitlist"),

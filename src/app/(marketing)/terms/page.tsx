@@ -64,15 +64,15 @@ export default function TermsPage() {
               {/* Introduction */}
               <div className="mb-12 space-y-4 text-fg-secondary">
                 <p>
-                  Welcome, and thank you for your interest in gremlinlabs, Inc. 
-                  (&ldquo;<strong className="text-fg-primary">gremlinlabs</strong>,&rdquo; 
+                  Welcome, and thank you for your interest in This Company, Inc. 
+                  (&ldquo;<strong className="text-fg-primary">This Company</strong>,&rdquo; 
                   &ldquo;<strong className="text-fg-primary">we</strong>,&rdquo; or 
                   &ldquo;<strong className="text-fg-primary">us</strong>&rdquo;), makers of the 
-                  Vibe Mode software platform. These Terms of Service 
+                  Amazing App software platform. These Terms of Service 
                   (&ldquo;<strong className="text-fg-primary">Terms</strong>&rdquo;) govern your 
-                  access to and use of gremlinlabs&apos;s software, platform, APIs, documentation, 
-                  and related tools, including the website vibemode.ai, and all related software 
-                  made available by gremlinlabs to build, deploy, and manage software projects 
+                  access to and use of This Company&apos;s software, platform, APIs, documentation,
+                  and related tools, including the website waitlist.example.com, and all related software
+                  made available by This Company to build, deploy, and manage software projects
                   (collectively, the &ldquo;<strong className="text-fg-primary">Service</strong>&rdquo;). 
                   By using the Service, you agree to these Terms.
                 </p>
@@ -84,7 +84,7 @@ export default function TermsPage() {
                 </p>
                 <p>
                   If you are using the Service as part of your work for a company or organization 
-                  that has a Master Services Agreement (&ldquo;MSA&rdquo;) with gremlinlabs, your 
+                  that has a Master Services Agreement (&ldquo;MSA&rdquo;) with This Company, your 
                   use of the Service is governed by that MSA.
                 </p>
                 <p>
@@ -100,10 +100,10 @@ export default function TermsPage() {
                   <div>
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">1.1. Provision of Access</h3>
                     <p>
-                      gremlinlabs is building a native AI development environment for macOS. The Service 
+                      This Company is building a native AI development environment for macOS. The Service 
                       offers a suite of coding tools driven by machine learning to help developers write 
                       code more easily and efficiently and can provide suggested code, outputs, or other 
-                      functions. Subject to your compliance with these Terms, gremlinlabs grants you a 
+                      functions. Subject to your compliance with these Terms, This Company grants you a 
                       limited right to access and use the Service.
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function TermsPage() {
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">1.3. Model Training</h3>
                     <div className="rounded-md border border-green/30 bg-green-dim p-4">
                       <p className="font-medium text-fg-primary">
-                        GREMLINLABS WILL NOT USE CONTENT TO TRAIN, OR ALLOW ANY THIRD PARTY TO TRAIN, 
+                        THIS COMPANY WILL NOT USE CONTENT TO TRAIN, OR ALLOW ANY THIRD PARTY TO TRAIN, 
                         ANY AI MODELS, UNLESS YOU&apos;VE EXPLICITLY AGREED TO THE USE OF CONTENT FOR TRAINING.
                       </p>
                     </div>
@@ -173,12 +173,12 @@ export default function TermsPage() {
                   <div>
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">1.6. Beta Services</h3>
                     <p>
-                      From time to time, gremlinlabs may make Beta Services available to you. Beta 
+                      From time to time, This Company may make Beta Services available to you. Beta 
                       Services shall be clearly designated as beta, pilot, limited release, or similar. 
                       Beta Services are intended for evaluation purposes and not for production use, are 
                       not fully supported, and may be subject to additional terms. Beta Services are 
                       provided on an &ldquo;as-is&rdquo; and &ldquo;as available&rdquo; basis without 
-                      any warranty. GREMLINLABS SHALL HAVE NO LIABILITY ARISING FROM BETA SERVICES - 
+                      any warranty. THIS COMPANY SHALL HAVE NO LIABILITY ARISING FROM BETA SERVICES - 
                       USE AT YOUR OWN RISK.
                     </p>
                   </div>
@@ -232,8 +232,8 @@ export default function TermsPage() {
                   <p>
                     If you believe that your account is no longer secure, you must immediately notify 
                     us at{" "}
-                    <a href="mailto:support@gremlinlabs.com" className="text-pink hover:text-pink-bright">
-                      support@gremlinlabs.com
+                    <a href="mailto:support@This Company.com" className="text-pink hover:text-pink-bright">
+                      support@This Company.com
                     </a>.
                   </p>
                 </div>
@@ -256,7 +256,7 @@ export default function TermsPage() {
                   <div>
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">4.2. Pricing</h3>
                     <p>
-                      gremlinlabs reserves the right to determine pricing for the Service. We will make 
+                      This Company reserves the right to determine pricing for the Service. We will make 
                       reasonable efforts to keep pricing information published on the Service up to date. 
                       We may change the fees for any feature of the Service at any time. Any price changes 
                       will take effect following notice to you.
@@ -267,7 +267,7 @@ export default function TermsPage() {
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">4.3. Subscriptions</h3>
                     <p>
                       The Service may include automatically recurring payments (&ldquo;Subscription&rdquo;). 
-                      If you activate a Subscription, you authorize gremlinlabs to periodically charge 
+                      If you activate a Subscription, you authorize This Company to periodically charge 
                       your payment method for the Subscription. You may cancel your Subscription at any 
                       time via your account settings or by contacting us. Cancellation will be effective 
                       at the end of the current billing period.
@@ -292,7 +292,7 @@ export default function TermsPage() {
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">5.1. Service Ownership</h3>
                     <p>
                       The Service, including all intellectual property rights therein, is and shall 
-                      remain the sole and exclusive property of gremlinlabs and its licensors. Except 
+                      remain the sole and exclusive property of This Company and its licensors. Except 
                       for the limited rights and licenses expressly granted under these Terms, nothing 
                       grants you any right, title, or interest in or to the Service.
                     </p>
@@ -301,8 +301,8 @@ export default function TermsPage() {
                   <div>
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">5.2. Your Content</h3>
                     <p>
-                      As between you and gremlinlabs, you retain ownership of all intellectual property 
-                      rights in your Inputs. Subject to your compliance with these Terms, gremlinlabs 
+                      As between you and This Company, you retain ownership of all intellectual property 
+                      rights in your Inputs. Subject to your compliance with these Terms, This Company 
                       assigns to you all its right, title, and interest in and to Suggestions.
                     </p>
                   </div>
@@ -313,7 +313,7 @@ export default function TermsPage() {
                       If you provide feedback, ideas, or suggestions about the Service 
                       (&ldquo;Feedback&rdquo;), we may use Feedback without restriction or obligation 
                       to you, and you hereby assign all right, title, and interest in Feedback to 
-                      gremlinlabs.
+                      This Company.
                     </p>
                   </div>
                 </div>
@@ -325,13 +325,13 @@ export default function TermsPage() {
                 <div className="space-y-4 text-fg-secondary">
                   <p>
                     The Service may contain links to third-party websites, applications, or services 
-                    (&ldquo;Third-Party Services&rdquo;). gremlinlabs does not control Third-Party 
+                    (&ldquo;Third-Party Services&rdquo;). This Company does not control Third-Party 
                     Services, and we are not responsible for their content, privacy policies, or 
                     practices.
                   </p>
                   <p>
                     Your use of Third-Party Services is at your own risk and subject to their terms 
-                    and conditions. gremlinlabs is not liable for any damages or losses caused by 
+                    and conditions. This Company is not liable for any damages or losses caused by 
                     Third-Party Services.
                   </p>
                 </div>
@@ -346,8 +346,8 @@ export default function TermsPage() {
                     <p>
                       You may terminate your account at any time by following the instructions in the 
                       Service or by contacting us at{" "}
-                      <a href="mailto:support@gremlinlabs.com" className="text-pink hover:text-pink-bright">
-                        support@gremlinlabs.com
+                      <a href="mailto:support@This Company.com" className="text-pink hover:text-pink-bright">
+                        support@This Company.com
                       </a>.
                     </p>
                   </div>
@@ -380,12 +380,12 @@ export default function TermsPage() {
                   <p className="mb-4">
                     THE SERVICE IS PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; WITHOUT 
                     WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. TO THE 
-                    MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, GREMLINLABS DISCLAIMS ALL WARRANTIES, 
+                    MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THIS COMPANY DISCLAIMS ALL WARRANTIES, 
                     INCLUDING ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, 
                     TITLE, AND NON-INFRINGEMENT.
                   </p>
                   <p>
-                    GREMLINLABS DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, 
+                    THIS COMPANY DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, 
                     OR SECURE, OR THAT ANY DEFECTS WILL BE CORRECTED. YOU USE THE SERVICE AT YOUR OWN 
                     RISK.
                   </p>
@@ -397,15 +397,15 @@ export default function TermsPage() {
                 <h2 className="mb-6 text-2xl font-bold text-fg-primary">9. Limitation of Liability</h2>
                 <div className="rounded-md border border-yellow/30 bg-yellow-dim p-6 text-fg-secondary">
                   <p className="mb-4">
-                    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL GREMLINLABS, 
+                    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THIS COMPANY, 
                     ITS AFFILIATES, OR THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS BE 
                     LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, 
                     OR ANY LOSS OF PROFITS, REVENUE, DATA, OR USE, WHETHER IN AN ACTION IN CONTRACT, 
                     TORT, OR OTHERWISE, ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR THE SERVICE.
                   </p>
                   <p>
-                    IN NO EVENT SHALL GREMLINLABS&apos;S TOTAL LIABILITY TO YOU EXCEED THE GREATER OF 
-                    (A) THE AMOUNTS YOU PAID TO GREMLINLABS IN THE TWELVE (12) MONTHS PRIOR TO THE 
+                    IN NO EVENT SHALL THIS COMPANY&apos;S TOTAL LIABILITY TO YOU EXCEED THE GREATER OF 
+                    (A) THE AMOUNTS YOU PAID TO THIS COMPANY IN THE TWELVE (12) MONTHS PRIOR TO THE 
                     CLAIM, OR (B) ONE HUNDRED DOLLARS ($100).
                   </p>
                 </div>
@@ -416,7 +416,7 @@ export default function TermsPage() {
                 <h2 className="mb-6 text-2xl font-bold text-fg-primary">10. Indemnification</h2>
                 <div className="space-y-4 text-fg-secondary">
                   <p>
-                    You agree to indemnify, defend, and hold harmless gremlinlabs, its affiliates, 
+                    You agree to indemnify, defend, and hold harmless This Company, its affiliates, 
                     and their respective officers, directors, employees, and agents from and against 
                     any and all claims, damages, losses, liabilities, costs, and expenses (including 
                     reasonable attorneys&apos; fees) arising out of or in connection with:
@@ -439,11 +439,11 @@ export default function TermsPage() {
                     <p>
                       Before filing a claim, you agree to try to resolve the dispute informally by 
                       contacting us at{" "}
-                      <a href="mailto:support@gremlinlabs.com" className="text-pink hover:text-pink-bright">
-                        support@gremlinlabs.com
+                      <a href="mailto:support@This Company.com" className="text-pink hover:text-pink-bright">
+                        support@This Company.com
                       </a>. 
                       We will try to resolve the dispute informally by contacting you via email. If 
-                      a dispute is not resolved within 60 days of submission, you or gremlinlabs may 
+                      a dispute is not resolved within 60 days of submission, you or This Company may 
                       proceed to arbitration.
                     </p>
                   </div>
@@ -451,7 +451,7 @@ export default function TermsPage() {
                   <div>
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">11.2. Arbitration Agreement</h3>
                     <p>
-                      You and gremlinlabs agree that any dispute, claim, or controversy arising out of 
+                      You and This Company agree that any dispute, claim, or controversy arising out of 
                       or relating to these Terms or the Service shall be resolved by binding arbitration, 
                       rather than in court, except that either party may seek equitable relief in court 
                       for infringement of intellectual property rights.
@@ -462,7 +462,7 @@ export default function TermsPage() {
                     <h3 className="mb-2 text-lg font-semibold text-fg-primary">11.3. Class Action Waiver</h3>
                     <div className="rounded-md border border-border-subtle bg-surface-base p-4">
                       <p className="font-medium text-fg-primary">
-                        YOU AND GREMLINLABS AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN 
+                        YOU AND THIS COMPANY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN 
                         YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY 
                         PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.
                       </p>
@@ -490,7 +490,7 @@ export default function TermsPage() {
                     <p>
                       These Terms, including the Privacy Policy and any other agreements expressly 
                       incorporated by reference, are the entire and exclusive understanding and 
-                      agreement between you and gremlinlabs regarding your use of the Service.
+                      agreement between you and This Company regarding your use of the Service.
                     </p>
                   </div>
 
@@ -536,13 +536,13 @@ export default function TermsPage() {
                       You may contact us by sending correspondence to:
                     </p>
                     <div className="mt-3 rounded-md border border-border-subtle bg-surface-base p-4">
-                      <p className="font-medium text-fg-primary">gremlinlabs, Inc.</p>
+                      <p className="font-medium text-fg-primary">This Company, Inc.</p>
                       <p>Los Angeles, CA</p>
                       <p>United States</p>
                       <p className="mt-2">
                         Email:{" "}
-                        <a href="mailto:support@gremlinlabs.com" className="text-pink hover:text-pink-bright">
-                          support@gremlinlabs.com
+                        <a href="mailto:support@This Company.com" className="text-pink hover:text-pink-bright">
+                          support@This Company.com
                         </a>
                       </p>
                     </div>

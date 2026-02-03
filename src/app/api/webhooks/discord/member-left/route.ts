@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { discordId, leftAt } = await request.json();
+    const { discordId } = await request.json();
 
     if (!discordId) {
       return NextResponse.json({ error: "Discord ID required" }, { status: 400 });
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (!connection) {
-      // User not linked to Vibe Mode
+      // User not linked to Amazing App
       return NextResponse.json({ success: true, linked: false });
     }
 
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       "discord_leave_server",
       undefined,
       discordId,
-      "Left Vibe Mode Discord server (bot detected)"
+      "Left Amazing App Discord server (bot detected)"
     );
 
     // Update connection

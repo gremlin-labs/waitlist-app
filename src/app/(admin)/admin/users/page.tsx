@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import {
@@ -57,7 +57,7 @@ export default function AdminUsersPage() {
   const [hideDemoUsers, setHideDemoUsers] = useState(true);
 
   // Helper to check if a user is a demo user
-  const isDemoUser = (email: string) => email.startsWith("demo-") && email.endsWith("@vibemode.ai");
+  const isDemoUser = (email: string) => email.startsWith("demo-") && email.endsWith("@example.com");
 
   const fetchUsers = useCallback(async () => {
     setLoading(true);

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/", "/dashboard/", "/settings/", "/onboarding/", "/apply/"],
     },
-    sitemap: "https://vibemode.ai/sitemap.xml",
+    sitemap: "https://waitlist.example.com/sitemap.xml",
   };
 }

@@ -318,7 +318,7 @@ export function SurveyForm({ initialGeoData }: SurveyFormProps) {
             <div>
               <CardTitle className="text-xl mb-2">What&apos;s your machine?</CardTitle>
               <CardDescription>
-                Vibe Mode is optimized for Apple Silicon — let us know what you&apos;re running
+                Amazing App is optimized for Apple Silicon — let us know what you&apos;re running
               </CardDescription>
             </div>
             <div className="space-y-4">
@@ -431,7 +431,7 @@ export function SurveyForm({ initialGeoData }: SurveyFormProps) {
             </div>
             <div className="space-y-4">
               <div>
-                <Label>What excites you most about Vibe Mode?</Label>
+                <Label>What excites you most about Amazing App?</Label>
                 <Textarea
                   value={formData.excitedAbout}
                   onChange={(e) => updateField("excitedAbout", e.target.value)}

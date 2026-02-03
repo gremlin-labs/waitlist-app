@@ -30,8 +30,8 @@ export const twitterConnections = pgTable("twitter_connections", {
   tokenExpiresAt: timestamp("token_expires_at"),
 
   // Follow status (cached, refreshed periodically)
-  followsVibemodeai: boolean("follows_vibemodeai").default(false),
-  followsGremlinlabs: boolean("follows_gremlinlabs").default(false),
+  followsAccount1: boolean("follows_account1").default(false),
+  followsAccount2: boolean("follows_account2").default(false),
   followsProductgremlin: boolean("follows_productgremlin").default(false),
   followsLastChecked: timestamp("follows_last_checked"),
 
@@ -81,15 +81,16 @@ export const discordGuildMemberships = pgTable("discord_guild_memberships", {
   userId: text("user_id")
     .references(() => user.id, { onDelete: "cascade" })
     .notNull(),
-
+  
   // Guild (server) data
   guildId: text("guild_id").notNull(),
   guildName: text("guild_name").notNull(),
-  guildIcon: text("guild_icon"),
-
+  guildIcon: text("guild_icon"), // Icon hash for CDN URL
+  memberCount: text("member_count"), // Approximate, if available
+  
   // User's role in this guild
   isOwner: boolean("is_owner").default(false),
-
+  
   // Timestamps
   firstSeenAt: timestamp("first_seen_at").defaultNow().notNull(),
   lastSeenAt: timestamp("last_seen_at").defaultNow().notNull(),
@@ -103,10 +104,10 @@ export const discordGuildStats = pgTable("discord_guild_stats", {
   guildId: text("guild_id").primaryKey(),
   guildName: text("guild_name").notNull(),
   guildIcon: text("guild_icon"),
-
+  
   // How many of our users are in this server
   userCount: text("user_count").notNull().default("0"),
-
+  
   // Timestamps
   firstSeenAt: timestamp("first_seen_at").defaultNow().notNull(),
   lastUpdatedAt: timestamp("last_updated_at").defaultNow().notNull(),

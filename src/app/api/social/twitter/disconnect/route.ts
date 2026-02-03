@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { db } from "@/db";
-import { twitterConnections, pointsLedger } from "@/db/schema";
-import { eq, and, like } from "drizzle-orm";
+import { twitterConnections } from "@/db/schema";
+import { eq } from "drizzle-orm";
 import { decrypt } from "@/lib/crypto";
 import { revokeTwitterToken } from "@/lib/twitter";
 

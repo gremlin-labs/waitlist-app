@@ -2,34 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vibemode.ai"),
+  metadataBase: new URL("https://waitlist.example.com"),
   title: {
-    default: "Vibe Mode — Lightning Fast Vibe IDE for macOS",
-    template: "%s | Vibe Mode",
+    default: "Waitlist — Join the Waitlist",
+    template: "%s | Waitlist",
   },
   description:
-    "Unfork yourself. The only native AI coding IDE built from scratch for macOS. 100MB download. Under 100MB RAM. Ghostty terminal. Local inference. No Electron. No VSCode fork. No compromises.",
+    "Join our waitlist to get early access. Sign up now and be among the first to experience our platform.",
   keywords: [
-    "vibe mode",
-    "vibe coding",
-    "vibe IDE",
-    "AI coding",
-    "AI IDE",
-    "AI code editor",
-    "vscode alternative",
-    "cursor alternative",
-    "claude code",
-    "native IDE",
-    "macOS IDE",
-    "Apple Silicon",
-    "MLX",
-    "Ghostty",
-    "local inference",
-    "code editor",
-    "developer tools",
-    "AI programming",
-    "AI assistant",
-    "coding assistant",
+    "waitlist",
+    "early access",
+    "beta access",
+    "sign up",
+    "join waitlist",
+    "product launch",
+    "coming soon",
   ],
   authors: [{ name: "gremlin labs" }],
   creator: "gremlin labs",
@@ -46,30 +33,30 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Vibe Mode — Lightning Fast Vibe IDE for macOS",
+    title: "Waitlist — Join the Waitlist",
     description:
-      "Unfork yourself. The only native AI coding IDE built from scratch. 100MB download. Under 100MB RAM. No Electron. No VSCode fork. No compromises.",
-    url: "https://vibemode.ai",
-    siteName: "Vibe Mode",
+      "Join our waitlist to get early access. Sign up now and be among the first to experience our platform.",
+    url: "https://waitlist.example.com",
+    siteName: "Waitlist",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "/vibemode-og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Vibe Mode - Lightning Fast Vibe IDE for macOS",
+        alt: "Waitlist - Join the Waitlist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vibe Mode — Lightning Fast Vibe IDE for macOS",
+    title: "Waitlist — Join the Waitlist",
     description:
-      "Unfork yourself. The only native AI coding IDE built from scratch. 100MB. Under 100MB RAM. No Electron. No compromises.",
-    site: "@vibemodeai",
-    creator: "@vibemodeai",
-    images: ["/vibemode-og-image.jpg"],
+      "Join our waitlist to get early access. Sign up now and be among the first to experience our platform.",
+    site: "@yourhandle",
+    creator: "@yourhandle",
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: [
@@ -83,7 +70,7 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon/site.webmanifest",
   alternates: {
-    canonical: "https://vibemode.ai",
+    canonical: "https://waitlist.example.com",
   },
   category: "technology",
 };

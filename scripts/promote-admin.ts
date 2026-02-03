@@ -179,7 +179,7 @@ async function main() {
 
       default:
         console.log(`
-😈 Vibe Mode Admin CLI
+😈 Amazing App Admin CLI
 
 Commands:
   bun run admin:promote <email>   - Promote user to admin

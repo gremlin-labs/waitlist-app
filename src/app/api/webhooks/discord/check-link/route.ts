@@ -8,7 +8,7 @@ const BOT_API_SECRET = process.env.BOT_API_SECRET;
 
 /**
  * POST /api/webhooks/discord/check-link
- * Called by Discord bot to check if a Discord user is linked to Vibe Mode
+ * Called by Discord bot to check if a Discord user is linked to Amazing App
  */
 export async function POST(request: NextRequest) {
   try {

@@ -4,9 +4,9 @@ import crypto from "crypto";
  * Twitter OAuth 2.0 Configuration
  */
 const TWITTER_ACCOUNTS = {
-  vibemodeai: process.env.TWITTER_ID_VIBEMODEAI || "",
-  gremlinlabs: process.env.TWITTER_ID_GREMLINLABS || "",
-  productgremlin: process.env.TWITTER_ID_PRODUCTGREMLIN || "",
+  account1: process.env.TWITTER_ID_ACCOUNT1 || "",
+  account2: process.env.TWITTER_ID_ACCOUNT2 || "",
+  account3: process.env.TWITTER_ID_ACCOUNT3 || "",
 } as const;
 
 const TWITTER_API_BASE = "https://api.twitter.com/2";
@@ -154,9 +154,9 @@ export async function getTwitterUser(accessToken: string): Promise<TwitterUser> 
 }
 
 interface FollowStatus {
-  vibemodeai: boolean;
-  gremlinlabs: boolean;
-  productgremlin: boolean;
+  followsAccount1: boolean;
+  followsAccount2: boolean;
+  followsProductgremlin: boolean;
 }
 
 /**
@@ -168,9 +168,9 @@ export async function checkTwitterFollows(
   userId: string
 ): Promise<FollowStatus> {
   const results: FollowStatus = {
-    vibemodeai: false,
-    gremlinlabs: false,
-    productgremlin: false,
+    followsAccount1: false,
+    followsAccount2: false,
+    followsProductgremlin: false,
   };
 
   // Collect all following IDs (may need pagination for users following many accounts)
@@ -212,9 +212,15 @@ export async function checkTwitterFollows(
   } while (paginationToken);
 
   // Check if our accounts are in the following list
+  const accountMap: Record<string, keyof FollowStatus> = {
+    account1: "followsAccount1",
+    account2: "followsAccount2",
+    account3: "followsProductgremlin",
+  };
+
   for (const [account, targetId] of Object.entries(TWITTER_ACCOUNTS)) {
     if (targetId && followingIds.includes(targetId)) {
-      results[account as keyof FollowStatus] = true;
+      results[accountMap[account]] = true;
     }
   }
 

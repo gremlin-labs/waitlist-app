@@ -401,7 +401,7 @@ export default function EcosystemPage() {
               <p className="mb-8 text-lg text-fg-secondary leading-relaxed">
                 Mitchell Hashimoto&apos;s GPU-accelerated terminal emulator—the one
                 that broke the internet when it launched—is built directly into
-                Vibe Mode. Not as a subprocess. Not wrapped in an iframe. Native
+                Amazing App. Not as a subprocess. Not wrapped in an iframe. Native
                 integration via the libghostty embedding API.
               </p>
               <p className="mb-8 text-fg-primary font-medium">

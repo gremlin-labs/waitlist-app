@@ -41,8 +41,8 @@ export async function GET() {
       where: eq(twitterConnections.userId, session.user.id),
       columns: {
         twitterUsername: true,
-        followsVibemodeai: true,
-        followsGremlinlabs: true,
+        followsAccount1: true,
+        followsAccount2: true,
         followsProductgremlin: true,
       },
     });
@@ -68,8 +68,8 @@ export async function GET() {
               connected: true,
               username: twitterConnection.twitterUsername,
               follows: {
-                vibemodeai: twitterConnection.followsVibemodeai,
-                gremlinlabs: twitterConnection.followsGremlinlabs,
+                account1: twitterConnection.followsAccount1,
+                account2: twitterConnection.followsAccount2,
                 productgremlin: twitterConnection.followsProductgremlin,
               },
             }

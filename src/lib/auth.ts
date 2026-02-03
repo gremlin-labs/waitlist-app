@@ -39,9 +39,9 @@ export const auth = betterAuth({
     magicLink({
       sendMagicLink: async ({ email, url }) => {
         await resend.emails.send({
-          from: process.env.FROM_EMAIL || "Vibe Mode <hey@vibemode.ai>",
+          from: process.env.FROM_EMAIL || "Waitlist <noreply@example.com>",
           to: email,
-          subject: "Sign in to Vibe Mode",
+          subject: "Sign in to Waitlist",
           html: magicLinkEmailTemplate(url),
         });
       },
@@ -119,7 +119,7 @@ function magicLinkEmailTemplate(url: string): string {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="color-scheme" content="dark">
       <meta name="supported-color-schemes" content="dark">
-      <title>Sign in to Vibe Mode</title>
+      <title>Sign in to Amazing App</title>
     </head>
     <body style="margin: 0; padding: 0; background-color: #050508; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-font-smoothing: antialiased;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #050508;">
@@ -129,7 +129,7 @@ function magicLinkEmailTemplate(url: string): string {
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 480px;">
               <tr>
                 <td align="center" style="padding-bottom: 32px;">
-                  <span style="font-size: 14px; font-weight: 700; letter-spacing: 2px; color: #ff2d7a; text-transform: uppercase;">VIBE MODE</span>
+                  <span style="font-size: 14px; font-weight: 700; letter-spacing: 2px; color: #ff2d7a; text-transform: uppercase;">AMAZING APP</span>
                 </td>
               </tr>
             </table>
@@ -151,7 +151,7 @@ function magicLinkEmailTemplate(url: string): string {
                           Your magic link is here
                         </h1>
                         <p style="margin: 0 0 32px 0; font-size: 16px; color: #8888a0; line-height: 1.5;">
-                          Click below to sign in to Vibe Mode
+                          Click below to sign in to Amazing App
                         </p>
                       </td>
                     </tr>
@@ -186,7 +186,7 @@ function magicLinkEmailTemplate(url: string): string {
               <tr>
                 <td align="center" style="padding-top: 32px;">
                   <p style="margin: 0; font-size: 12px; color: #444455; font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;">
-                    — gremlinlabs 😈
+                    — This Company 😈
                   </p>
                 </td>
               </tr>

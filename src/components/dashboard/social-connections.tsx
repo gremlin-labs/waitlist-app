@@ -16,8 +16,8 @@ import { Button } from "@/components/ui/button";
 interface TwitterStatus {
   connected: boolean;
   username?: string;
-  followsVibemodeai: boolean;
-  followsGremlinlabs: boolean;
+  followsAccount1: boolean;
+  followsAccount2: boolean;
   followsProductgremlin: boolean;
 }
 
@@ -67,8 +67,8 @@ export function SocialConnections({
 
   const twitterFollowCount = twitter
     ? [
-        twitter.followsVibemodeai,
-        twitter.followsGremlinlabs,
+        twitter.followsAccount1,
+        twitter.followsAccount2,
         twitter.followsProductgremlin,
       ].filter(Boolean).length
     : 0;
@@ -116,14 +116,14 @@ export function SocialConnections({
             <div className="pl-7 space-y-2">
               <FollowTask
                 label="Follow @vibemodeai"
-                completed={twitter.followsVibemodeai}
+                completed={twitter.followsAccount1}
                 href="https://twitter.com/vibemodeai"
                 points={10}
               />
               <FollowTask
-                label="Follow @gremlinlabs"
-                completed={twitter.followsGremlinlabs}
-                href="https://twitter.com/gremlinlabs"
+                label="Follow @thiscompany"
+                completed={twitter.followsAccount2}
+                href="https://twitter.com/thiscompany"
                 points={10}
               />
               <FollowTask
@@ -172,7 +172,7 @@ export function SocialConnections({
           {discord?.connected && (
             <div className="pl-7 space-y-2">
               <ServerTask
-                label="Join Vibe Mode Server"
+                label="Join Amazing App Server"
                 completed={discord.hasJoinedServer}
                 href={discordInviteUrl}
                 points={20}
